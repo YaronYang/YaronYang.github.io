@@ -4,26 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>重构 读书笔记(一) | YaronYang&#39;s Blog</title>
+    <title>编程之美-1的数目 | YaronYang&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YaronYang">
     
 
     
-    <meta name="description" content="1.为什么重构虽然书上提到了重构中提到了可以提高理解性,但我认为重构的主要目的还是为了提高程序的延展性,降低了程序的修改成本,其中的一些思想与代码看起来真的跟艺术一样.
-2.重构离不开测试因为重构代码是为了让代码更好地服务与我们.而不是添麻烦.所以一定要构建良好的测试方法,测试方法必须要有自我检验能力.使得重构前后程序所得到的结果保持一致.而且在重构中建议将步子放的小一些,重构技术就是以微小的步伐">
+    <meta name="description" content="问题:1的数目给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个
+1.给正整数N,写代码计算1的个数.2.满足飞f(N) = N 的最大数是多少?
+
+自己的思路对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历对每个数字位数遍历的代码为123456theNumberCount = 0;while (n != 0)&amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重构 读书笔记(一)">
-<meta property="og:url" content="http://yoursite.com/2016/10/02/重构-读书笔记-一/index.html">
+<meta property="og:title" content="编程之美-1的数目">
+<meta property="og:url" content="http://yoursite.com/2016/04/12/编程之美-1的数目/index.html">
 <meta property="og:site_name" content="YaronYang's Blog">
-<meta property="og:description" content="1.为什么重构虽然书上提到了重构中提到了可以提高理解性,但我认为重构的主要目的还是为了提高程序的延展性,降低了程序的修改成本,其中的一些思想与代码看起来真的跟艺术一样.
-2.重构离不开测试因为重构代码是为了让代码更好地服务与我们.而不是添麻烦.所以一定要构建良好的测试方法,测试方法必须要有自我检验能力.使得重构前后程序所得到的结果保持一致.而且在重构中建议将步子放的小一些,重构技术就是以微小的步伐">
-<meta property="og:updated_time" content="2016-10-12T12:56:25.000Z">
+<meta property="og:description" content="问题:1的数目给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个
+1.给正整数N,写代码计算1的个数.2.满足飞f(N) = N 的最大数是多少?
+
+自己的思路对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历对每个数字位数遍历的代码为123456theNumberCount = 0;while (n != 0)&amp;#123;">
+<meta property="og:updated_time" content="2016-10-12T13:43:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重构 读书笔记(一)">
-<meta name="twitter:description" content="1.为什么重构虽然书上提到了重构中提到了可以提高理解性,但我认为重构的主要目的还是为了提高程序的延展性,降低了程序的修改成本,其中的一些思想与代码看起来真的跟艺术一样.
-2.重构离不开测试因为重构代码是为了让代码更好地服务与我们.而不是添麻烦.所以一定要构建良好的测试方法,测试方法必须要有自我检验能力.使得重构前后程序所得到的结果保持一致.而且在重构中建议将步子放的小一些,重构技术就是以微小的步伐">
+<meta name="twitter:title" content="编程之美-1的数目">
+<meta name="twitter:description" content="问题:1的数目给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个
+1.给正整数N,写代码计算1的个数.2.满足飞f(N) = N 的最大数是多少?
+
+自己的思路对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历对每个数字位数遍历的代码为123456theNumberCount = 0;while (n != 0)&amp;#123;">
 
     
     <link rel="alternative" href="/atom.xml" title="YaronYang&#39;s Blog" type="application/atom+xml">
@@ -83,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/02/重构-读书笔记-一/" title="重构 读书笔记(一)" itemprop="url">重构 读书笔记(一)</a>
+      <a href="/2016/04/12/编程之美-1的数目/" title="编程之美-1的数目" itemprop="url">编程之美-1的数目</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-02T07:47:39.000Z" itemprop="datePublished"> 發表於 2016-10-02</time>
+    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> 發表於 2016-04-12</time>
     
   </p>
 </header>
@@ -99,18 +105,18 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-为什么重构"><span class="toc-number">1.</span> <span class="toc-text">1.为什么重构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-重构离不开测试"><span class="toc-number">2.</span> <span class="toc-text">2.重构离不开测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-优秀的程序员写代码给人看"><span class="toc-number">3.</span> <span class="toc-text">3.优秀的程序员写代码给人看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-第一个实例中所运用的技巧"><span class="toc-number">4.</span> <span class="toc-text">4.第一个实例中所运用的技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-减少跨越"><span class="toc-number">4.1.</span> <span class="toc-text">(1)减少跨越</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-减少临时变量与修改变量名"><span class="toc-number">4.2.</span> <span class="toc-text">(2)减少临时变量与修改变量名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-高屋建瓴来优化性能"><span class="toc-number">4.3.</span> <span class="toc-text">(3)高屋建瓴来优化性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-重构过程中的一些小技巧"><span class="toc-number">4.4.</span> <span class="toc-text">(4)重构过程中的一些小技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#综上"><span class="toc-number">5.</span> <span class="toc-text">综上</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题-1的数目"><span class="toc-number">1.</span> <span class="toc-text">问题:1的数目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自己的思路"><span class="toc-number">1.1.</span> <span class="toc-text">自己的思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#牛逼的思路"><span class="toc-number">1.2.</span> <span class="toc-text">牛逼的思路</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="1-为什么重构"><a href="#1-为什么重构" class="headerlink" title="1.为什么重构"></a>1.为什么重构</h2><p>虽然书上提到了重构中提到了可以提高理解性,但我认为重构的主要目的还是为了提高程序的延展性,降低了程序的修改成本,其中的一些思想与代码看起来真的跟艺术一样.</p>
-<h2 id="2-重构离不开测试"><a href="#2-重构离不开测试" class="headerlink" title="2.重构离不开测试"></a>2.重构离不开测试</h2><p>因为重构代码是为了让代码更好地服务与我们.而不是添麻烦.所以一定要构建良好的测试方法,<strong>测试方法必须要有自我检验能力.</strong>使得重构前后程序所得到的结果保持一致.而且在重构中建议将步子放的小一些,<strong>重构技术就是以微小的步伐修改程序.</strong></p>
-<h2 id="3-优秀的程序员写代码给人看"><a href="#3-优秀的程序员写代码给人看" class="headerlink" title="3.优秀的程序员写代码给人看"></a>3.优秀的程序员写代码给人看</h2><p>在我的理解,这里感觉重构过度会降低代码的理解性,因为他会分割逻辑.但是重构的确会带来条理明确的代码.(我个人认为这两条不矛盾),通过重构能够保证每次运算都是在变量的声明层,的确是易于维护.也许是我思想转不过弯来,有待后续提高.</p>
-<h2 id="4-第一个实例中所运用的技巧"><a href="#4-第一个实例中所运用的技巧" class="headerlink" title="4.第一个实例中所运用的技巧"></a>4.第一个实例中所运用的技巧</h2><h3 id="1-减少跨越"><a href="#1-减少跨越" class="headerlink" title="(1)减少跨越"></a>(1)减少跨越</h3><p>将顾客电影商家三者三者联系解耦,建立了顾客-&gt;商家-&gt;电影的一对一的联系,尽量减少隔层跨越,使用商家成为顾客,电影的纽带,感觉这个模型非常像MVC模型的简化版,这也说明了设计思想是共通的.</p>
-<h3 id="2-减少临时变量与修改变量名"><a href="#2-减少临时变量与修改变量名" class="headerlink" title="(2)减少临时变量与修改变量名"></a>(2)减少临时变量与修改变量名</h3><p>这里减少了大量的临时变量,减少了数据的传递,在性能上有优化但不多,主要还是为了减少传递,但是我个人认为一些便于理解的变量名还是有利于程序后续开发的,当然也可以用注释来替代.<br>同时修改刚才解耦后的变量名,这我就认为是老生常谈了,但是一个贴合变量的变量名的确是非常有用的.</p>
-<h3 id="3-高屋建瓴来优化性能"><a href="#3-高屋建瓴来优化性能" class="headerlink" title="(3)高屋建瓴来优化性能"></a>(3)高屋建瓴来优化性能</h3><p>看到这里感触还是很大的,的确是大量重构之后,的确是会可能出现性能降低的问题.但是真的变得非常好解决了,高度重构的代码只需要一些很简单的方法就可以避免性能问题,甚至提升性能,的确是把复杂问题变成了多个简单问题.</p>
-<h3 id="4-重构过程中的一些小技巧"><a href="#4-重构过程中的一些小技巧" class="headerlink" title="(4)重构过程中的一些小技巧"></a>(4)重构过程中的一些小技巧</h3><p>举几个例子,就比如拆分函数,需要观察函数中的相对常量,相对变量,变量可以作为返回值等,这些就不一一列举了.</p>
-<h2 id="综上"><a href="#综上" class="headerlink" title="综上"></a>综上</h2><p>这本书的确是一本开卷有益的好书,第一个例子非常小,就是一个简单地大学课后题的程序,竟然就是写了50多页,的确是应了作者说的随便一个例子100多页(刚开始还真以为有点吹啊),虽然程序很小,但是透露出来的思想的确是非常的棒,这本书买的绝对是值了.</p>
+		<h2 id="问题-1的数目"><a href="#问题-1的数目" class="headerlink" title="问题:1的数目"></a>问题:1的数目</h2><blockquote><p>给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个</p>
+<p>1.给正整数N,写代码计算1的个数.<br>2.满足飞f(N) = N 的最大数是多少?</p>
+</blockquote>
+<h3 id="自己的思路"><a href="#自己的思路" class="headerlink" title="自己的思路"></a>自己的思路</h3><p>对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历<br>对每个数字位数遍历的代码为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">theNumberCount = 0;</div><div class="line">while (n != 0)</div><div class="line">&#123;</div><div class="line">     theNumberCount += (n % 10 == 1) ? 1 : 0;</div><div class="line">     n/=10;</div><div class="line">&#125;//这里自己使用if写的,和人家书上一比真是自惭形秽....</div></pre></td></tr></table></figure><br>这里时间复杂度为= N <em> lgN = 循环数字 </em> 循环位数</p>
+<h3 id="牛逼的思路"><a href="#牛逼的思路" class="headerlink" title="牛逼的思路"></a><strong>牛逼的思路</strong></h3><p>感觉真正牛逼的思路一般都不会是从普通角度出发的,这次计算一的个数,我们只考虑位次.只需要考虑N在每个位置上出现的次数<br>假设当N = 145<br>N在个位上出现了 345 / 10  + 1= 35次<br>N在十位上出现了 345 / 10 / 10 * 10 = 30次<br>N在百位上出现了  100次</p>
+<p>可得出规律<br>其中核心代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">iCount = 0;</div><div class="line"></div><div class="line">iFactor = 1;</div><div class="line"></div><div class="line">iLowerNum = 0;</div><div class="line"></div><div class="line">iCurrNum = 0;</div><div class="line"></div><div class="line">iHigherNum = 0;</div><div class="line"></div><div class="line">while(n / iFactor != 0)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">iLowerNum = n - (n / iFactor) * iFactor;</div><div class="line"></div><div class="line">iCurrNum = (n / iFactor) % 10;</div><div class="line"></div><div class="line">iHigherNum = n / (iFactor * 10);</div><div class="line"></div><div class="line">switch(iCurrNum)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">case 0:</div><div class="line"></div><div class="line">iCount += iHigherNum * iFactor;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">case 1:</div><div class="line"></div><div class="line">iCount += iHigherNum * iFactor + iLowerNum + 1;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">default:</div><div class="line"></div><div class="line">iCount += (iHigherNum + 1) * iFactor;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">iFactor *= 10;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这个方法只要分析N就可以得到f（N），避开了从1到N的遍历，输入长度为Len的数字N的时间复杂度为O（Len），即为O（ln（n）/ln（10）+1）。</p>
+<p>###问题2待续</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -119,7 +125,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/读书笔记/">读书笔记</a><a href="/tags/重构/">重构</a>
+  <span></span> <a href="/tags/编程之美/">编程之美</a><a href="/tags/算法/">算法</a>
   </div>
 
 </div>
@@ -128,7 +134,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/10/02/重构-读书笔记-一/" data-title="重构 读书笔记(一) | YaronYang&#39;s Blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/04/12/编程之美-1的数目/" data-title="编程之美-1的数目 | YaronYang&#39;s Blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -141,20 +147,20 @@
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/2016/04/12/编程之美-1的数目/"  title="编程之美-1的数目">
- <strong>下一篇：</strong><br/> 
- <span>编程之美-1的数目
-</span>
+ <div class="prev" >
+ <a href="/2016/10/02/重构-读书笔记-一/" title="重构 读书笔记(一)">
+  <strong>上一篇：</strong><br/>
+  <span>
+  重构 读书笔记(一)</span>
 </a>
 </div>
+
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/10/02/重构-读书笔记-一/" data-title="重构 读书笔记(一)" data-url="http://yoursite.com/2016/10/02/重构-读书笔记-一/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/12/编程之美-1的数目/" data-title="编程之美-1的数目" data-url="http://yoursite.com/2016/04/12/编程之美-1的数目/"></div>
 </section>
 
 
@@ -170,7 +176,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-为什么重构"><span class="toc-number">1.</span> <span class="toc-text">1.为什么重构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-重构离不开测试"><span class="toc-number">2.</span> <span class="toc-text">2.重构离不开测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-优秀的程序员写代码给人看"><span class="toc-number">3.</span> <span class="toc-text">3.优秀的程序员写代码给人看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-第一个实例中所运用的技巧"><span class="toc-number">4.</span> <span class="toc-text">4.第一个实例中所运用的技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-减少跨越"><span class="toc-number">4.1.</span> <span class="toc-text">(1)减少跨越</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-减少临时变量与修改变量名"><span class="toc-number">4.2.</span> <span class="toc-text">(2)减少临时变量与修改变量名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-高屋建瓴来优化性能"><span class="toc-number">4.3.</span> <span class="toc-text">(3)高屋建瓴来优化性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-重构过程中的一些小技巧"><span class="toc-number">4.4.</span> <span class="toc-text">(4)重构过程中的一些小技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#综上"><span class="toc-number">5.</span> <span class="toc-text">综上</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题-1的数目"><span class="toc-number">1.</span> <span class="toc-text">问题:1的数目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自己的思路"><span class="toc-number">1.1.</span> <span class="toc-text">自己的思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#牛逼的思路"><span class="toc-number">1.2.</span> <span class="toc-text">牛逼的思路</span></a></li></ol></li></ol>
  
   </div>
 
