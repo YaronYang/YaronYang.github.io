@@ -4,32 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>编程之美-1的数目 | YaronYang&#39;s Blog</title>
+    <title>寻找单身狗(二) | YaronYang&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YaronYang">
     
 
     
-    <meta name="description" content="问题:1的数目给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个
-1.给正整数N,写代码计算1的个数.2.满足飞f(N) = N 的最大数是多少?
+    <meta name="description" content="然而算法这个东西撇开实际操作的话,就没有什么意义了,这让我想到赶快找到一个案例来快速的使用上我们的算法,也让我打开了一本中途弃读的书.(以前感觉自己段位不够,现在可能也不够….)
 
-自己的思路对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历对每个数字位数遍历的代码为123456theNumberCount = 0;while (n != 0)&amp;#123;">
+其中问题如下:有很多服务器存储数据，假设一个机器仅存储一个标号为ID的记录，假设机器总量在10亿以下且ID是小于10亿的整数，假设每份数据保存两个备份，这样就有两个机器存储了同样的数据。
+问题是：1.假设在某个时间得到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编程之美-1的数目">
-<meta property="og:url" content="http://yoursite.com/2016/04/12/编程之美-1的数目/index.html">
+<meta property="og:title" content="寻找单身狗(二)">
+<meta property="og:url" content="http://yoursite.com/2016/03/16/寻找单身狗-二/index.html">
 <meta property="og:site_name" content="YaronYang's Blog">
-<meta property="og:description" content="问题:1的数目给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个
-1.给正整数N,写代码计算1的个数.2.满足飞f(N) = N 的最大数是多少?
+<meta property="og:description" content="然而算法这个东西撇开实际操作的话,就没有什么意义了,这让我想到赶快找到一个案例来快速的使用上我们的算法,也让我打开了一本中途弃读的书.(以前感觉自己段位不够,现在可能也不够….)
 
-自己的思路对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历对每个数字位数遍历的代码为123456theNumberCount = 0;while (n != 0)&amp;#123;">
-<meta property="og:updated_time" content="2016-10-12T22:50:28.000Z">
+其中问题如下:有很多服务器存储数据，假设一个机器仅存储一个标号为ID的记录，假设机器总量在10亿以下且ID是小于10亿的整数，假设每份数据保存两个备份，这样就有两个机器存储了同样的数据。
+问题是：1.假设在某个时间得到">
+<meta property="og:updated_time" content="2016-10-14T03:03:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编程之美-1的数目">
-<meta name="twitter:description" content="问题:1的数目给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个
-1.给正整数N,写代码计算1的个数.2.满足飞f(N) = N 的最大数是多少?
+<meta name="twitter:title" content="寻找单身狗(二)">
+<meta name="twitter:description" content="然而算法这个东西撇开实际操作的话,就没有什么意义了,这让我想到赶快找到一个案例来快速的使用上我们的算法,也让我打开了一本中途弃读的书.(以前感觉自己段位不够,现在可能也不够….)
 
-自己的思路对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历对每个数字位数遍历的代码为123456theNumberCount = 0;while (n != 0)&amp;#123;">
+其中问题如下:有很多服务器存储数据，假设一个机器仅存储一个标号为ID的记录，假设机器总量在10亿以下且ID是小于10亿的整数，假设每份数据保存两个备份，这样就有两个机器存储了同样的数据。
+问题是：1.假设在某个时间得到">
 
     
     <link rel="alternative" href="/atom.xml" title="YaronYang&#39;s Blog" type="application/atom+xml">
@@ -89,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/12/编程之美-1的数目/" title="编程之美-1的数目" itemprop="url">编程之美-1的数目</a>
+      <a href="/2016/03/16/寻找单身狗-二/" title="寻找单身狗(二)" itemprop="url">寻找单身狗(二)</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> Published 2016-04-12</time>
+    <time datetime="2016-03-16T12:01:46.000Z" itemprop="datePublished"> Published 2016-03-16</time>
     
   </p>
 </header>
@@ -105,18 +105,26 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题-1的数目"><span class="toc-number">1.</span> <span class="toc-text">问题:1的数目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自己的思路"><span class="toc-number">1.1.</span> <span class="toc-text">自己的思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#牛逼的思路"><span class="toc-number">1.2.</span> <span class="toc-text">牛逼的思路</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对比-优化-升级"><span class="toc-number">1.</span> <span class="toc-text">对比,优化,升级</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路一"><span class="toc-number">1.1.</span> <span class="toc-text">思路一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路二"><span class="toc-number">1.2.</span> <span class="toc-text">思路二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路四"><span class="toc-number">1.3.</span> <span class="toc-text">思路四</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="问题-1的数目"><a href="#问题-1的数目" class="headerlink" title="问题:1的数目"></a>问题:1的数目</h2><blockquote><p>给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个</p>
-<p>1.给正整数N,写代码计算1的个数.<br>2.满足飞f(N) = N 的最大数是多少?</p>
-</blockquote>
-<h3 id="自己的思路"><a href="#自己的思路" class="headerlink" title="自己的思路"></a>自己的思路</h3><p>对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历<br>对每个数字位数遍历的代码为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">theNumberCount = 0;</div><div class="line">while (n != 0)</div><div class="line">&#123;</div><div class="line">     theNumberCount += (n % 10 == 1) ? 1 : 0;</div><div class="line">     n/=10;</div><div class="line">&#125;//这里自己使用if写的,和人家书上一比真是自惭形秽....</div></pre></td></tr></table></figure><br>这里时间复杂度为= N <em> lgN = 循环数字 </em> 循环位数</p>
-<h3 id="牛逼的思路"><a href="#牛逼的思路" class="headerlink" title="牛逼的思路"></a><strong>牛逼的思路</strong></h3><p>感觉真正牛逼的思路一般都不会是从普通角度出发的,这次计算一的个数,我们只考虑位次.只需要考虑N在每个位置上出现的次数<br>假设当N = 145<br>N在个位上出现了 345 / 10  + 1= 35次<br>N在十位上出现了 345 / 10 / 10 * 10 = 30次<br>N在百位上出现了  100次</p>
-<p>可得出规律<br>其中核心代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">iCount = 0;</div><div class="line"></div><div class="line">iFactor = 1;</div><div class="line"></div><div class="line">iLowerNum = 0;</div><div class="line"></div><div class="line">iCurrNum = 0;</div><div class="line"></div><div class="line">iHigherNum = 0;</div><div class="line"></div><div class="line">while(n / iFactor != 0)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">iLowerNum = n - (n / iFactor) * iFactor;</div><div class="line"></div><div class="line">iCurrNum = (n / iFactor) % 10;</div><div class="line"></div><div class="line">iHigherNum = n / (iFactor * 10);</div><div class="line"></div><div class="line">switch(iCurrNum)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">case 0:</div><div class="line"></div><div class="line">iCount += iHigherNum * iFactor;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">case 1:</div><div class="line"></div><div class="line">iCount += iHigherNum * iFactor + iLowerNum + 1;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">default:</div><div class="line"></div><div class="line">iCount += (iHigherNum + 1) * iFactor;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">iFactor *= 10;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这个方法只要分析N就可以得到f（N），避开了从1到N的遍历，输入长度为Len的数字N的时间复杂度为O（Len），即为O（ln（n）/ln（10）+1）。</p>
-<p>###问题2的思路<br>这就要拿起以前上大学的数学了,这里归根结底还是个求就极限的问题 通过上一个程序可推测N = N * N的指数(n-1),也就可以得出指数在等于11的时候N超过上届一点点点点,然后就是恶心的遍历时间了,这个便利比较简单代码我就不写了.<br>最后得到N = 1111111110 (别数了9个1)</p>
+		<p>然而算法这个东西撇开实际操作的话,就没有什么意义了,这让我想到赶快找到一个案例来快速的使用上我们的算法,也让我打开了一本中途弃读的书.(以前感觉自己段位不够,现在可能也不够….)</p>
+<hr>
+<p>其中问题如下:<br><blockquote><p>有很多服务器存储数据，假设一个机器仅存储一个标号为ID的记录，假设机器总量在10亿以下且ID是小于10亿的整数，假设每份数据保存两个备份，这样就有两个机器存储了同样的数据。</p>
+<p>问题是：<br>1.假设在某个时间得到一个数据文件ID的列表，是否能快速地找出表中仅出现一次的ID？即快速找出出现故障的机器存储的数据ID。</p>
+<p>2.如果有两台机器出现故障呢？（假设存储同一份数据的两台机器不会同时出现故障，即列表中缺少的是两个不等的ID）</p>
+<footer><strong>快速找出故障机器</strong><cite>编程之美</cite></footer></blockquote><br>我们回顾一下上一篇单身狗的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if (array.length == 0)</div><div class="line">return -1;</div><div class="line">int x = 0;</div><div class="line">for (int i = 0; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">return x;</div></pre></td></tr></table></figure><br>这里我们一眼就能看出我们的代码非常适合问题一,这个也就是书上的思路三的一部分,他已经是一个相对较好的解决方案了.我们现在就来对比一下书上的其他思路.</p>
+<hr>
+<h2 id="对比-优化-升级"><a href="#对比-优化-升级" class="headerlink" title="对比,优化,升级"></a>对比,优化,升级</h2><h3 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h3><p>遍历序列,引入第二个数组 ,来记录每个id的出现的次数,遍历完毕后,再在整个数组上查询计数为1的那只单身狗.这样来看时间复杂度为O(N),空间复杂度为O(N).(空间复杂度的思想很重要~)<br>当然在这种情况问题二易得出.</p>
+<hr>
+<h3 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h3><p>思路二是思路一的升级版,就是优化他的计数数组,使用哈希表,每当一个数字出现两次,就从表中删除掉这些成对出现的数(FFF),这样的确可以有效节约空间复杂度,但是从最坏情况来看,时间复杂度,空间复杂度依然是O(N).<br>当然在这种情况问题二也易得出.</p>
+<hr>
+<p>###思路三(也就是我们的思路)<br>因为异或只需要占用有限的存储空间,所以我们可以轻易的将空间复杂度降低为O(n),这里也体现了我们的高瞻远瞩~<br>但是要解决问题二我们就相对复杂一些,这里我们可以做分类讨论,因为若是a=b,则我们可以通过求和的方式得出.若a!=b 则我们可以则a^b其中某一位上为1,也可通过数学方法的出a,b.</p>
+<h3 id="思路四"><a href="#思路四" class="headerlink" title="思路四"></a>思路四</h3><hr>
+<p>这里我认为是对思路三的优化,直接预存ID的和,与ID的乘积(还提供了平方差的思路),然后不需要分类讨论就可以快速得到a,b的值.(而且感觉也脱离的只能寻找1或者2个数的困境???存疑)</p>
+<hr>
+<p>总结到这,个人感觉位计算在很多地方还是有奇效的,希望以后自己多注意吧,不知道单身狗还有没有(三),有的话准备继续整理下位运算的案例.</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -125,7 +133,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/读书笔记/">读书笔记</a><a href="/tags/编程之美/">编程之美</a>
+  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/思路拓展/">思路拓展</a><a href="/tags/读书笔记/">读书笔记</a>
   </div>
 
 </div>
@@ -134,7 +142,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/04/12/编程之美-1的数目/" data-title="编程之美-1的数目 | YaronYang&#39;s Blog" data-tsina="undefined" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/03/16/寻找单身狗-二/" data-title="寻找单身狗(二) | YaronYang&#39;s Blog" data-tsina="undefined" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -148,18 +156,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/09/23/Disqus-竟然被墙了/" title="Disqus 竟然被墙了">
+ <a href="/2016/04/12/编程之美-1的数目/" title="编程之美-1的数目">
   <strong>上一篇：</strong><br/>
   <span>
-  Disqus 竟然被墙了</span>
+  编程之美-1的数目</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/03/16/寻找单身狗-二/"  title="寻找单身狗(二)">
+<a href="/2016/03/14/每日一题-1/"  title="寻找单身狗(一)">
  <strong>下一篇：</strong><br/> 
- <span>寻找单身狗(二)
+ <span>寻找单身狗(一)
 </span>
 </a>
 </div>
@@ -168,7 +176,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/04/12/编程之美-1的数目/" data-title="编程之美-1的数目" data-url="http://yoursite.com/2016/04/12/编程之美-1的数目/"></div>
+	<div class="ds-thread" data-thread-key="2016/03/16/寻找单身狗-二/" data-title="寻找单身狗(二)" data-url="http://yoursite.com/2016/03/16/寻找单身狗-二/"></div>
 </section>
 
 
@@ -178,7 +186,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题-1的数目"><span class="toc-number">1.</span> <span class="toc-text">问题:1的数目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自己的思路"><span class="toc-number">1.1.</span> <span class="toc-text">自己的思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#牛逼的思路"><span class="toc-number">1.2.</span> <span class="toc-text">牛逼的思路</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对比-优化-升级"><span class="toc-number">1.</span> <span class="toc-text">对比,优化,升级</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路一"><span class="toc-number">1.1.</span> <span class="toc-text">思路一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路二"><span class="toc-number">1.2.</span> <span class="toc-text">思路二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路四"><span class="toc-number">1.3.</span> <span class="toc-text">思路四</span></a></li></ol></li></ol>
  
   </div>
 
