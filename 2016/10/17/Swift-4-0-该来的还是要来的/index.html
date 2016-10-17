@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="YaronYang's Blog">
 <meta property="og:description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
 翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
-<meta property="og:updated_time" content="2016-10-17T03:26:52.000Z">
+<meta property="og:updated_time" content="2016-10-17T03:33:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 4.0 该来的还是要来的">
 <meta name="twitter:description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
@@ -116,30 +116,26 @@
 <li><a href="commonly_proposed.md">Commonly Rejected Changes</a>, proposals which have been denied in the past.</li>
 <li>经常被拒绝的修改方法与提案(PS:让你死的心服口服)</li>
 </ul>
-<p>This document describes goals for the Swift language on a per-release<br>basis, usually listing minor releases adding to the currently shipping<br>version and one major release out.  Each release will have many<br>smaller features or changes independent of these larger goals, and not<br>all goals are reached for each release.</p>
-<p>Goals for past versions are included at the bottom of the document for<br>historical purposes, but are not necessarily indicative of the<br>features shipped. The release notes for each shipped version are the<br>definitive list of notable changes in each release.<br>大致意思是会给出一个表,来描述每个大版本与每个小版本的改动目标,当然小版本的目标并不一定围绕当前大版本目标的指定,会有一些额外于主功能的小目标.<br>过去版本的目标会放在文档的底部,让你回顾历史.但并不代表说的一定精细,想看全的,你还是去哪个版本的文档查去吧.笑…</p>
+<p>This document describes goals for the Swift language on a per-release basis, usually listing minor releases adding to the currently shipping version and one major release out.  Each release will have many smaller features or changes independent of these larger goals, and not all goals are reached for each release.</p>
+<p>Goals for past versions are included at the bottom of the document for historical purposes, but are not necessarily indicative of the features shipped. The release notes for each shipped version are the definitive list of notable changes in each release.<br>大致意思是会给出一个表,来描述每个大版本与每个小版本的改动目标,当然小版本的目标并不一定围绕当前大版本目标的指定,会有一些额外于主功能的小目标.<br>过去版本的目标会放在文档的底部,让你回顾历史.但并不代表说的一定精细,想看全的,你还是去哪个版本的文档查去吧.笑…</p>
 <h2 id="Development-major-version-Swift-4-0"><a href="#Development-major-version-Swift-4-0" class="headerlink" title="Development major version:  Swift 4.0"></a>Development major version:  Swift 4.0</h2><h2 id="Swift开发主要版本-4-0"><a href="#Swift开发主要版本-4-0" class="headerlink" title="Swift开发主要版本 4.0"></a>Swift开发主要版本 4.0</h2><p>Expected release date: Late 2017<br><strong>发布时间会在2017年的后半年,年底?(这里偏向年底)</strong></p>
 <p>The Swift 4 release is designed around two primary goals:<br>Swift 4.0 主要围绕两个设计目标:<br>to provide source stability for Swift 3 code and to provide ABI stability for the Swift standard library. To that end, the Swift 4 release will be divided into two stages.<br>1.为Swfit 3.0的代码提供稳定性<br>2.为Swift 的标准库提供二进制接口(ABI)稳定性<br>所以Swift4.0在两个阶段内完成.<br>Stage 1 focuses on the essentials required for source and ABI stability. Features that don’t fundamentally change the ABI of existing language features or imply an ABI-breaking change to the standard library will not be considered in this stage.</p>
 <p>Stage 2 will commence once the implementation work on the Stage 1 features is cresting, and can contain a few other large and small features. We expect that stage 2 will commence some time in Spring 2017.</p>
 <p>这段意思有点歧义我是这么理解的:<br>第一阶段:这段时间我们回侧重于源代码的稳定性于ABI的修改,会引入大量与现在不同或者说破坏现在稳定性的ABI来调整整个的结构.这意味着我们在接下来的时间里就不会再去破坏ABI的稳定性了.<br>第二阶段:第二阶段的开始时间定在第一阶段工作达到顶峰时,在不破坏ABI的稳定下,会存在大小特征的改变,这段工作会在2017年春季开始.</p>
 <p>The high-priority features supporting stage 1’s source and ABI stability goals are:<br>第一阶段的最高优先级目标是:</p>
 <ul>
-<li>Source stability features: the Swift language will need [some<pre><code>accommodations](https://github.com/apple/swift-evolution/blob/master/proposals/0141-available-by-swift-version.md) to support code bases that target different language versions, to help Swift deliver on its source-compatibility goals while still enabling rapid progress.
-</code></pre></li>
+<li>Source stability features: the Swift language will need <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0141-available-by-swift-version.md" target="_blank" rel="external">some                                                           accommodations</a> to support code bases that target different language versions, to help Swift deliver on its source-compatibility goals while still enabling rapid progress.</li>
 <li><p>源稳定特性: Swift需要更好地拓展性来支持它面向不同语言版本,者能够帮助Swift在拥有兼容性的同时,实现快速开发.(也就是说可以2.3,3.0,OC,C,C++,一起搞开发了?)</p>
 </li>
-<li><p>Resilience: resilience provides a way for public APIs to evolve over time, while maintaining a stable ABI. For example, resilience eliminates the [fragile base class</p>
-<pre><code>problem](https://en.wikipedia.org/wiki/Fragile_base_class) that occurs in some object-oriented languages (e.g., C++) by describing the types of API changes that can be made without breaking ABI (e.g., &quot;a new stored property or method can be added to a class&quot;).
-</code></pre></li>
+<li><p>Resilience: resilience provides a way for public APIs to evolve over time, while maintaining a stable ABI. For example, resilience eliminates the <a href="https://en.wikipedia.org/wiki/Fragile_base_class" target="_blank" rel="external">fragile base class                problem</a> that occurs in some object-oriented languages (e.g., C++) by describing the types of API changes that can be made without breaking ABI (e.g., “a new stored property or method can be added to a class”).</p>
+</li>
 <li><p>弹性:弹性为公共API提供了一种在不改变ABI的情况下,API随时间发展的方式.例如:在不改变ABI时,一些老预言增加基类的问题(可能不太对…)</p>
 </li>
 <li><p>Stabilizing the ABI: There are a ton of small details that need to be audited and improved in the code generation model, including interaction with the Swift runtime. While not specifically user-facing, the decisions here affect performance and (in some rare cases) the future evolution of Swift.</p>
 </li>
 <li><p>稳定ABI：有大量的细节需要在代码生成模型中进行审核和改进，包括与Swift运行时的交互。虽然不是特别面向用户，这里的决定影响性能和（在一些罕见的情况下）Swift的未来发展。</p>
 </li>
-<li><p>Generics improvements needed by the standard library: the standard library has a number of workarounds for language deficiencies, many of which manifest as extraneous underscored protocols and workarounds. If the underlying language deficiencies remain, they become a permanent part of the stable ABI. [Conditional</p>
-<pre><code>conformances](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md),
-</code></pre><p><a href="https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#recursive-protocol-constraints-" target="_blank" rel="external">recursive protocol<br>requirements</a>,<br>and <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0142-associated-types-constraints.md" target="_blank" rel="external">where clauses for associated<br>   types</a> are known to be in this category, but it’s plausible that other features will be in scope if they would be used in the standard library.</p>
+<li><p>Generics improvements needed by the standard library: the standard library has a number of workarounds for language deficiencies, many of which manifest as extraneous underscored protocols and workarounds. If the underlying language deficiencies remain, they become a permanent part of the stable ABI. <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md" target="_blank" rel="external">Conditional                                            conformances</a>,<br><a href="https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#recursive-protocol-constraints-" target="_blank" rel="external">recursive protocol requirements</a>,<br>and <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0142-associated-types-constraints.md" target="_blank" rel="external">where clauses for associated     types</a> are known to be in this category, but it’s plausible that other features will be in scope if they would be used in the standard library.</p>
 </li>
 <li><p>标准库需要的通用改进：标准库有多种语言缺陷的解决方法，其中许多表现为无关紧要的协议和解决方法。如果潜在的语言缺陷仍然存在，它们将成为稳定ABI的永久性部分。条件一致性，递归协议要求和其中相关类型的子句已知属于此类别，但是如果在标准库中使用其他特征，则其他特征将在范围内是合理的。</p>
 </li>
@@ -159,6 +155,11 @@
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Swfit/">Swfit</a><a href="/tags/翻译/">翻译</a>
+  </div>
 
 </div>
 
@@ -241,6 +242,14 @@
 			
 		
 			
+				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/编程之美/" title="编程之美">编程之美<sup>1</sup></a></li>
 			
 		
@@ -255,7 +264,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/思路拓展/" style="font-size: 13.33px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 16.67px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 13.33px;">重构</a>
+       <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/思路拓展/" style="font-size: 13.33px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 16.67px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 13.33px;">重构</a>
     </div>
   </div>
 
