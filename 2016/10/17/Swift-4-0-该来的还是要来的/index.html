@@ -1,0 +1,512 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Swift 4.0 该来的还是要来的 | YaronYang&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="YaronYang">
+    
+
+    
+    <meta name="description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
+翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift 4.0 该来的还是要来的">
+<meta property="og:url" content="http://yoursite.com/2016/10/17/Swift-4-0-该来的还是要来的/index.html">
+<meta property="og:site_name" content="YaronYang's Blog">
+<meta property="og:description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
+翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
+<meta property="og:updated_time" content="2016-10-17T03:26:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift 4.0 该来的还是要来的">
+<meta name="twitter:description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
+翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
+
+    
+    <link rel="alternative" href="/atom.xml" title="YaronYang&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="YaronYang&#39;s Blog" title="YaronYang&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/17/Swift-4-0-该来的还是要来的/" title="Swift 4.0 该来的还是要来的" itemprop="url">Swift 4.0 该来的还是要来的</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> Published 2016-10-17</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#翻译跟自己的些理解"><span class="toc-number">2.</span> <span class="toc-text">翻译跟自己的些理解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-Programming-Language-Evolution"><span class="toc-number"></span> <span class="toc-text">Swift Programming Language Evolution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-major-version-Swift-4-0"><span class="toc-number">1.</span> <span class="toc-text">Development major version:  Swift 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift开发主要版本-4-0"><span class="toc-number">2.</span> <span class="toc-text">Swift开发主要版本 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Previous-releases"><span class="toc-number">3.</span> <span class="toc-text">Previous releases</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40" target="_blank" rel="external">https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40</a></p>
+<h2 id="翻译跟自己的些理解"><a href="#翻译跟自己的些理解" class="headerlink" title="翻译跟自己的些理解"></a>翻译跟自己的些理解</h2><h1 id="Swift-Programming-Language-Evolution"><a href="#Swift-Programming-Language-Evolution" class="headerlink" title="Swift Programming Language Evolution"></a>Swift Programming Language Evolution</h1><p><strong>Before you initiate a pull request</strong>, please read the process document. Ideas should be thoroughly discussed on the <a href="https://swift.org/community/#swift-evolution" target="_blank" rel="external">swift-evolution mailing list</a> first.<br>在你进行合并请求前,请阅读进程文档,你的想法需要被大家在[swift-evolution mailing list]中讨论后,(你再提出合并请求.PS:很傲娇啊,别老是烦我)</p>
+<p>This repository tracks the ongoing evolution of Swift. It contains:<br>这个仓库会跟踪SWift4.0的持续发展,它包括:</p>
+<ul>
+<li>Goals for upcoming Swift releases (this document).</li>
+<li>马上就要发布的Swift版本变化的目标.</li>
+<li>The <a href="https://apple.github.io/swift-evolution/" target="_blank" rel="external">Swift evolution review status</a> tracking proposals to change Swift.</li>
+<li>Swift新版本大家对他的评论以及改变状态.</li>
+<li>The <a href="process.md">Swift evolution process</a> that governs the evolution of Swift.</li>
+<li>Swift的演变与进化过程.</li>
+<li><a href="commonly_proposed.md">Commonly Rejected Changes</a>, proposals which have been denied in the past.</li>
+<li>经常被拒绝的修改方法与提案(PS:让你死的心服口服)</li>
+</ul>
+<p>This document describes goals for the Swift language on a per-release<br>basis, usually listing minor releases adding to the currently shipping<br>version and one major release out.  Each release will have many<br>smaller features or changes independent of these larger goals, and not<br>all goals are reached for each release.</p>
+<p>Goals for past versions are included at the bottom of the document for<br>historical purposes, but are not necessarily indicative of the<br>features shipped. The release notes for each shipped version are the<br>definitive list of notable changes in each release.<br>大致意思是会给出一个表,来描述每个大版本与每个小版本的改动目标,当然小版本的目标并不一定围绕当前大版本目标的指定,会有一些额外于主功能的小目标.<br>过去版本的目标会放在文档的底部,让你回顾历史.但并不代表说的一定精细,想看全的,你还是去哪个版本的文档查去吧.笑…</p>
+<h2 id="Development-major-version-Swift-4-0"><a href="#Development-major-version-Swift-4-0" class="headerlink" title="Development major version:  Swift 4.0"></a>Development major version:  Swift 4.0</h2><h2 id="Swift开发主要版本-4-0"><a href="#Swift开发主要版本-4-0" class="headerlink" title="Swift开发主要版本 4.0"></a>Swift开发主要版本 4.0</h2><p>Expected release date: Late 2017<br><strong>发布时间会在2017年的后半年,年底?(这里偏向年底)</strong></p>
+<p>The Swift 4 release is designed around two primary goals:<br>Swift 4.0 主要围绕两个设计目标:<br>to provide source stability for Swift 3 code and to provide ABI stability for the Swift standard library. To that end, the Swift 4 release will be divided into two stages.<br>1.为Swfit 3.0的代码提供稳定性<br>2.为Swift 的标准库提供二进制接口(ABI)稳定性<br>所以Swift4.0在两个阶段内完成.<br>Stage 1 focuses on the essentials required for source and ABI stability. Features that don’t fundamentally change the ABI of existing language features or imply an ABI-breaking change to the standard library will not be considered in this stage.</p>
+<p>Stage 2 will commence once the implementation work on the Stage 1 features is cresting, and can contain a few other large and small features. We expect that stage 2 will commence some time in Spring 2017.</p>
+<p>这段意思有点歧义我是这么理解的:<br>第一阶段:这段时间我们回侧重于源代码的稳定性于ABI的修改,会引入大量与现在不同或者说破坏现在稳定性的ABI来调整整个的结构.这意味着我们在接下来的时间里就不会再去破坏ABI的稳定性了.<br>第二阶段:第二阶段的开始时间定在第一阶段工作达到顶峰时,在不破坏ABI的稳定下,会存在大小特征的改变,这段工作会在2017年春季开始.</p>
+<p>The high-priority features supporting stage 1’s source and ABI stability goals are:<br>第一阶段的最高优先级目标是:</p>
+<ul>
+<li>Source stability features: the Swift language will need [some<pre><code>accommodations](https://github.com/apple/swift-evolution/blob/master/proposals/0141-available-by-swift-version.md) to support code bases that target different language versions, to help Swift deliver on its source-compatibility goals while still enabling rapid progress.
+</code></pre></li>
+<li><p>源稳定特性: Swift需要更好地拓展性来支持它面向不同语言版本,者能够帮助Swift在拥有兼容性的同时,实现快速开发.(也就是说可以2.3,3.0,OC,C,C++,一起搞开发了?)</p>
+</li>
+<li><p>Resilience: resilience provides a way for public APIs to evolve over time, while maintaining a stable ABI. For example, resilience eliminates the [fragile base class</p>
+<pre><code>problem](https://en.wikipedia.org/wiki/Fragile_base_class) that occurs in some object-oriented languages (e.g., C++) by describing the types of API changes that can be made without breaking ABI (e.g., &quot;a new stored property or method can be added to a class&quot;).
+</code></pre></li>
+<li><p>弹性:弹性为公共API提供了一种在不改变ABI的情况下,API随时间发展的方式.例如:在不改变ABI时,一些老预言增加基类的问题(可能不太对…)</p>
+</li>
+<li><p>Stabilizing the ABI: There are a ton of small details that need to be audited and improved in the code generation model, including interaction with the Swift runtime. While not specifically user-facing, the decisions here affect performance and (in some rare cases) the future evolution of Swift.</p>
+</li>
+<li><p>稳定ABI：有大量的细节需要在代码生成模型中进行审核和改进，包括与Swift运行时的交互。虽然不是特别面向用户，这里的决定影响性能和（在一些罕见的情况下）Swift的未来发展。</p>
+</li>
+<li><p>Generics improvements needed by the standard library: the standard library has a number of workarounds for language deficiencies, many of which manifest as extraneous underscored protocols and workarounds. If the underlying language deficiencies remain, they become a permanent part of the stable ABI. [Conditional</p>
+<pre><code>conformances](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md),
+</code></pre><p><a href="https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#recursive-protocol-constraints-" target="_blank" rel="external">recursive protocol<br>requirements</a>,<br>and <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0142-associated-types-constraints.md" target="_blank" rel="external">where clauses for associated<br>   types</a> are known to be in this category, but it’s plausible that other features will be in scope if they would be used in the standard library.</p>
+</li>
+<li><p>标准库需要的通用改进：标准库有多种语言缺陷的解决方法，其中许多表现为无关紧要的协议和解决方法。如果潜在的语言缺陷仍然存在，它们将成为稳定ABI的永久性部分。条件一致性，递归协议要求和其中相关类型的子句已知属于此类别，但是如果在标准库中使用其他特征，则其他特征将在范围内是合理的。</p>
+</li>
+<li><p>String re-evaluation: String is one of the most important fundamental types in the language. Swift 4 seeks to make strings more powerful and easier-to-use, while retaining Unicode correctness by default.</p>
+</li>
+<li><p>字符串重新评估：字符串是语言中最重要的基本类型之一。 Swift 4旨在使字符串更强大，更易于使用，同时在默认情况下保留Unicode正确性。</p>
+</li>
+<li><p>Memory ownership model: an (opt-in) Cyclone/Rust-inspired memory ownership model is highly desired by systems programmers and for other high-performance applications that want predictable and deterministic performance. This feature will fundamentally shape the ABI, from low-level language concerns such as “inout” and low-level “addressors” to its impact on the standard library. While a full memory ownership model is likely too large for Swift 4 stage 1, we need a comprehensive design to understand how it will change the ABI.<br>*内存拥有模型：（opt-in）Cyclone / Rust启发的内存拥有模式是系统程序员和其他需要可预测和确定性性能的高性能应用程序所非常需要的。这个特性将从根本上塑造ABI，从低级语言关注如“inout”和低级“addressors”到它对标准库的影响。虽然完整的内存拥有模型对于Swift 4第1阶段可能过大，但我们需要一个全面的设计来了解它将如何改变ABI。</p>
+</li>
+</ul>
+<h2 id="Previous-releases"><a href="#Previous-releases" class="headerlink" title="Previous releases"></a>Previous releases</h2><ul>
+<li><a href="releases/swift-3_0.md">Swift 3.0</a> - Released on September 13, 2016</li>
+<li><a href="releases/swift-2_2.md">Swift 2.2</a> - Released on March 21, 2016</li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/10/17/Swift-4-0-该来的还是要来的/" data-title="Swift 4.0 该来的还是要来的 | YaronYang&#39;s Blog" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/09/23/Disqus-竟然被墙了/"  title="Disqus 竟然被墙了">
+ <strong>下一篇：</strong><br/> 
+ <span>Disqus 竟然被墙了
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/10/17/Swift-4-0-该来的还是要来的/" data-title="Swift 4.0 该来的还是要来的" data-url="http://yoursite.com/2016/10/17/Swift-4-0-该来的还是要来的/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#翻译跟自己的些理解"><span class="toc-number">2.</span> <span class="toc-text">翻译跟自己的些理解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-Programming-Language-Evolution"><span class="toc-number"></span> <span class="toc-text">Swift Programming Language Evolution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-major-version-Swift-4-0"><span class="toc-number">1.</span> <span class="toc-text">Development major version:  Swift 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift开发主要版本-4-0"><span class="toc-number">2.</span> <span class="toc-text">Swift开发主要版本 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Previous-releases"><span class="toc-number">3.</span> <span class="toc-text">Previous releases</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/思路拓展/" title="思路拓展">思路拓展<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/编程之美/" title="编程之美">编程之美<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">Tag Cloud</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/思路拓展/" style="font-size: 13.33px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 16.67px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 13.33px;">重构</a>
+    </div>
+  </div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m YaronYang ,A iOS Developer. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="YaronYang">YaronYang</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"YaronYang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
