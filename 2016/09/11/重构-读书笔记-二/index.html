@@ -57,7 +57,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -73,7 +73,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yaronyang.com">
 					</form>
 					
@@ -96,14 +96,14 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> Published 2016-09-11</time>
+    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> 发表于 2016-09-11</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#重构原则"><span class="toc-number">1.</span> <span class="toc-text">重构原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#重构的定义"><span class="toc-number">1.1.</span> <span class="toc-text">重构的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为何重构"><span class="toc-number">1.2.</span> <span class="toc-text">为何重构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-重构改进软件设计"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.重构改进软件设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-重构使软件更容易理解"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.重构使软件更容易理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-重构找bug-重构提高编程速度"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.重构找bug,重构提高编程速度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#何时重构"><span class="toc-number">1.3.</span> <span class="toc-text">何时重构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加功能时重构"><span class="toc-number">1.3.1.</span> <span class="toc-text">添加功能时重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改bug时重构"><span class="toc-number">1.3.2.</span> <span class="toc-text">修改bug时重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复审代码时重构"><span class="toc-number">1.3.3.</span> <span class="toc-text">复审代码时重构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重构中的难题"><span class="toc-number">1.4.</span> <span class="toc-text">重构中的难题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数据库"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-接口"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-难以重构完成的设计改动-安全"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.难以重构完成的设计改动(安全)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-不该重构"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.不该重构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重构与设计"><span class="toc-number">1.5.</span> <span class="toc-text">重构与设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重构与性能"><span class="toc-number">1.6.</span> <span class="toc-text">重构与性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-number">1.7.</span> <span class="toc-text">小结</span></a></li></ol></li></ol>
 		
@@ -183,17 +183,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#重构原则"><span class="toc-number">1.</span> <span class="toc-text">重构原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#重构的定义"><span class="toc-number">1.1.</span> <span class="toc-text">重构的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为何重构"><span class="toc-number">1.2.</span> <span class="toc-text">为何重构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-重构改进软件设计"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.重构改进软件设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-重构使软件更容易理解"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.重构使软件更容易理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-重构找bug-重构提高编程速度"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.重构找bug,重构提高编程速度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#何时重构"><span class="toc-number">1.3.</span> <span class="toc-text">何时重构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加功能时重构"><span class="toc-number">1.3.1.</span> <span class="toc-text">添加功能时重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改bug时重构"><span class="toc-number">1.3.2.</span> <span class="toc-text">修改bug时重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复审代码时重构"><span class="toc-number">1.3.3.</span> <span class="toc-text">复审代码时重构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重构中的难题"><span class="toc-number">1.4.</span> <span class="toc-text">重构中的难题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数据库"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-接口"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-难以重构完成的设计改动-安全"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.难以重构完成的设计改动(安全)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-不该重构"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.不该重构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重构与设计"><span class="toc-number">1.5.</span> <span class="toc-text">重构与设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重构与性能"><span class="toc-number">1.6.</span> <span class="toc-text">重构与性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-number">1.7.</span> <span class="toc-text">小结</span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -203,7 +203,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
@@ -227,19 +227,19 @@
 			
 		
 			
-				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -255,7 +255,7 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">Tag Cloud</p>
+    <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 13.33px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 16.67px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 13.33px;">重构</a>
     </div>
@@ -494,7 +494,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
