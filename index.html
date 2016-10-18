@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yaronyang.com">
 					</form>
 					
@@ -88,7 +88,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-18T03:30:30.000Z" itemprop="datePublished"> Published 2016-10-18</time>
+    <time datetime="2016-10-18T03:30:30.000Z" itemprop="datePublished"> 发表于 2016-10-18</time>
     
   </p>
 </header>
@@ -152,7 +152,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> Published 2016-10-17</time>
+    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> 发表于 2016-10-17</time>
     
   </p>
 </header>
@@ -256,7 +256,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-23T01:40:06.000Z" itemprop="datePublished"> Published 2016-09-23</time>
+    <time datetime="2016-09-23T01:40:06.000Z" itemprop="datePublished"> 发表于 2016-09-23</time>
     
   </p>
 </header>
@@ -315,7 +315,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> Published 2016-09-11</time>
+    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> 发表于 2016-09-11</time>
     
   </p>
 </header>
@@ -390,7 +390,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-03T07:47:39.000Z" itemprop="datePublished"> Published 2016-09-03</time>
+    <time datetime="2016-09-03T07:47:39.000Z" itemprop="datePublished"> 发表于 2016-09-03</time>
     
   </p>
 </header>
@@ -442,368 +442,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/04/12/编程之美-1的数目/" title="编程之美-1的数目" itemprop="url">编程之美-1的数目</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> Published 2016-04-12</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="问题-1的数目"><a href="#问题-1的数目" class="headerlink" title="问题:1的数目"></a>问题:1的数目</h2><blockquote><p>给定一个十进制正整数N,写下从一开始到N的所有整数,然后数其中出现的所有1的个数.其中11算两个,111算三个</p>
-<p>1.给正整数N,写代码计算1的个数.<br>2.满足飞f(N) = N 的最大数是多少?</p>
-</blockquote>
-<h3 id="自己的思路"><a href="#自己的思路" class="headerlink" title="自己的思路"></a>自己的思路</h3><p>对从1到N的每个数字进行遍历,其中对每个数字的每个位数进行遍历<br>对每个数字位数遍历的代码为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">theNumberCount = 0;</div><div class="line">while (n != 0)</div><div class="line">&#123;</div><div class="line">     theNumberCount += (n % 10 == 1) ? 1 : 0;</div><div class="line">     n/=10;</div><div class="line">&#125;//这里自己使用if写的,和人家书上一比真是自惭形秽....</div></pre></td></tr></table></figure><br>这里时间复杂度为= N <em> lgN = 循环数字 </em> 循环位数</p>
-<h3 id="牛逼的思路"><a href="#牛逼的思路" class="headerlink" title="牛逼的思路"></a><strong>牛逼的思路</strong></h3><p>感觉真正牛逼的思路一般都不会是从普通角度出发的,这次计算一的个数,我们只考虑位次.只需要考虑N在每个位置上出现的次数<br>假设当N = 145<br>N在个位上出现了 345 / 10  + 1= 35次<br>N在十位上出现了 345 / 10 / 10 * 10 = 30次<br>N在百位上出现了  100次</p>
-<p>可得出规律<br>其中核心代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">iCount = 0;</div><div class="line"></div><div class="line">iFactor = 1;</div><div class="line"></div><div class="line">iLowerNum = 0;</div><div class="line"></div><div class="line">iCurrNum = 0;</div><div class="line"></div><div class="line">iHigherNum = 0;</div><div class="line"></div><div class="line">while(n / iFactor != 0)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">iLowerNum = n - (n / iFactor) * iFactor;</div><div class="line"></div><div class="line">iCurrNum = (n / iFactor) % 10;</div><div class="line"></div><div class="line">iHigherNum = n / (iFactor * 10);</div><div class="line"></div><div class="line">switch(iCurrNum)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line">case 0:</div><div class="line"></div><div class="line">iCount += iHigherNum * iFactor;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">case 1:</div><div class="line"></div><div class="line">iCount += iHigherNum * iFactor + iLowerNum + 1;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">default:</div><div class="line"></div><div class="line">iCount += (iHigherNum + 1) * iFactor;</div><div class="line"></div><div class="line">break;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">iFactor *= 10;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这个方法只要分析N就可以得到f（N），避开了从1到N的遍历，输入长度为Len的数字N的时间复杂度为O（Len），即为O（ln（n）/ln（10）+1）。</p>
-<h3 id="问题2的思路"><a href="#问题2的思路" class="headerlink" title="问题2的思路"></a>问题2的思路</h3><p>这就要拿起以前上大学的数学了,这里归根结底还是个求就极限的问题 通过上一个程序可推测N = N * N的指数(n-1),也就可以得出指数在等于11的时候N超过上届一点点点点,然后就是恶心的遍历时间了,这个便利比较简单代码我就不写了.<br>最后得到N = 1111111110 (别数了9个1)</p>
 
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/读书笔记/">读书笔记</a><a href="/tags/编程之美/">编程之美</a>
-  </div>
+  <nav id="page-nav" class="clearfix">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+  </nav>
 
 </div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/04/12/编程之美-1的数目/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/04/12/编程之美-1的数目/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/03/23/寻找单身狗-三-位运算/" title="寻找单身狗(三)-位运算实现加减乘除" itemprop="url">寻找单身狗(三)-位运算实现加减乘除</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-03-23T01:52:45.000Z" itemprop="datePublished"> Published 2016-03-23</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>其实从单身狗之类的题目我们发现了位运算能够提升程序的运算速度,我回顾了一下以前学过的一些内容发现,它的本质原理是这样的.<br>计算机操作的本身是一堆一堆的二进制数,也就是一堆一堆的二进制信号,对二进制数进行的计算就是位运算,其中包括与或非异这四种相对常用的(其实就是非算法题不用),还有用的少一些的就是左移右移(算法题的大多数也不用).<br>画了图(偷个懒以后补上):</p>
-<p>机器语言——-&gt;位运算———&gt;加减乘除——-&gt;现在的函数</p>
-<p>其中很多位运算算法题的思路有几点:<br>1.就是绕开加减乘除这一层隔离层直接实现现在的函数<br>2.运用位运算的特殊概念解决实际问题(单身狗就是这么找到的)<br>3.直接考察位运算转化为加减乘除的方法(也就是本篇要说的)<br>4.在深一些就是位运算是如何实现的了,这个对我最爱的数电模电老师还是有些惭愧的,基本忘干净了</p>
-<h2 id="概念补足"><a href="#概念补足" class="headerlink" title="概念补足"></a>概念补足</h2><p>关于位运算的计算估计很多人都忘了,我在这里粘贴一下地址,要是还记得的我建议直接看加减乘除的实现吧.<br><a href="https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C" target="_blank" rel="external">https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C</a> 关于位运算的基础概念</p>
-<h2 id="加减乘除"><a href="#加减乘除" class="headerlink" title="加减乘除"></a>加减乘除</h2><figure class="highlight c"><figcaption><span>++</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//递归版本的加法实现</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> b ? Add(a^b, (a&amp;b)&lt;&lt;<span class="number">1</span>) : a;</div><div class="line">    <span class="comment">/*</span></div><div class="line">    if(b)</div><div class="line">        return plus_rec(a^b, (a&amp;b)&lt;&lt;1);</div><div class="line">    else</div><div class="line">        return a;</div><div class="line">        */</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//该为迭代版本</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Add_iter</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ans;</div><div class="line">    <span class="keyword">while</span>(b)</div><div class="line">    &#123;</div><div class="line">        ans = a^b;</div><div class="line">        b = (a&amp;b)&lt;&lt;<span class="number">1</span>;</div><div class="line">        a = ans;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//求a的相反数：将各位取反加一</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">negative</span><span class="params">(<span class="keyword">int</span> a)</span>     <span class="comment">//get -a</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> Add(~a, <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Minus</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> Add(a, negative(b));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//正数乘法</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Multi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(b)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)</div><div class="line">            ans = Add(ans, a);</div><div class="line">        a = a &lt;&lt; <span class="number">1</span>;</div><div class="line">        b = b &gt;&gt; <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//正数除法</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Divide</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> coun = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(a &gt;= b)</div><div class="line">    &#123;</div><div class="line">        a = Minus(a, b);</div><div class="line">        coun = Add(coun, <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> coun;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//判断是否是负数，0，正数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isneg</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> a &amp; <span class="number">0x8000</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">iszero</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> !(a &amp; <span class="number">0xFFFF</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">ispos</span><span class="params">(<span class="keyword">int</span> a)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> (a&amp;<span class="number">0xFFFF</span>) &amp;&amp; !(a&amp;<span class="number">0x8000</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//处理负数的乘法和除法</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">My_Multi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(iszero(a) || iszero(b))</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(isneg(a))</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(isneg(b))</div><div class="line">            <span class="keyword">return</span> Multi(negative(a), negative(b));</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> negative(Multi(negative(a), b));</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(isneg(b))</div><div class="line">        <span class="keyword">return</span> negative(Multi(a, negative(b)));</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="keyword">return</span> Multi(a, b);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">My_Divide</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span>(iszero(b))</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Error!"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(iszero(a))</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(isneg(a))</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(isneg(b))</div><div class="line">            <span class="keyword">return</span> Divide(negative(a), negative(b));</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> negative(Divide(negative(a), b));</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(isneg(b))</div><div class="line">        <span class="keyword">return</span> negative(Divide(a, negative(b)));</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="keyword">return</span> Divide(a, b);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这里我的建议还是自己写一写,我按照思路写了之后发现的确很巧妙,但是没有考虑加法的递归迭代等诸多版本的(茴香豆的5种写法),这里还是粘贴下大神的代码吧,写的的确是舒服.<br>不知道还有没有下一篇,有的话我准备写一点关于位运算面试题的小总结,也许就弃坑了~</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/位运算/">位运算</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/03/23/寻找单身狗-三-位运算/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/23/寻找单身狗-三-位运算/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/03/17/关于hexo搭建微博中遇到的坑/" title="关于hexo搭建blog中遇到的坑与解决办法" itemprop="url">关于hexo搭建blog中遇到的坑与解决办法</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-03-17T06:41:44.000Z" itemprop="datePublished"> Published 2016-03-17</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>传说中使用md写微博才是男人(程序员)的浪漫,而且以前的博客也倒了,就用github+hexo搭建了现在您在游览的这个博客,这里呢首先要感谢下,我这个主题Jacman的制作者,主题非常漂亮实用,要不我还要费事去学js.</p>
-<hr>
-<p>首先列举下我搭建过程中用到的文章:<br>1.<a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="external">http://www.jianshu.com/p/35e197cb1273</a> 这篇是介绍基本流程的<br>2.<a href="http://lukang.me/2015/optimization-of-hexo-2.html" target="_blank" rel="external">http://lukang.me/2015/optimization-of-hexo-2.html</a> 这是讲怎么优化定制的<br>3.<a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a> 这个是官方文档<br>4.<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">https://github.com/wuchong/jacman</a>  这个是我用的主题</p>
-<hr>
-<h3 id="搭建中遇到的问题与解决办法"><a href="#搭建中遇到的问题与解决办法" class="headerlink" title="搭建中遇到的问题与解决办法"></a>搭建中遇到的问题与解决办法</h3><hr>
-<ul>
-<li><h4 id="绑定域名问题"><a href="#绑定域名问题" class="headerlink" title="绑定域名问题"></a>绑定域名问题</h4>在绑定域名开始的时候解析地址出了问题,后来改正后,github一直在报404错误,阅读官方文档,需要配置CNAME文件,配置好了CNAME文件也一直报404,然后就开始犯难,最后在github的仓库中的setting中发现了一个Custom domain项,配上了现有域名,问题解决.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="绑定域名问题造成的其他目录无法打开"><a href="#绑定域名问题造成的其他目录无法打开" class="headerlink" title="绑定域名问题造成的其他目录无法打开"></a>绑定域名问题造成的其他目录无法打开</h4>需要在blog所属的文件config文件下配置上你所注册的顶级域名,就可以了.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="在将博客上传至服务器时CNAME文件被覆盖"><a href="#在将博客上传至服务器时CNAME文件被覆盖" class="headerlink" title="在将博客上传至服务器时CNAME文件被覆盖"></a>在将博客上传至服务器时CNAME文件被覆盖</h4>将CNAME或者是README.md之类的文件放到source/下,可以防止被覆盖.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="关于如何加载图片以及后续问题"><a href="#关于如何加载图片以及后续问题" class="headerlink" title="关于如何加载图片以及后续问题"></a>关于如何加载图片以及后续问题</h4>简单的加载方式很简单,只需要source文件夹下放入图片就可以在博文中引用,但是这样一旦图片太多整个文件就会显得很乱,其实可以通过配置config文件,将post_asset_folder:改为ture就可以每当创建一篇文章时,自动创建一个同名文件夹,引用图片时,直接写文件名即可.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4>想要偷懒的话直接把主题拿过来,配上基本的东西其实就还满好看了,但是还是建议了解下整个主题的架构,这样可以自己搭建一些环境累的东西.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="上传步骤"><a href="#上传步骤" class="headerlink" title="上传步骤"></a>上传步骤</h4>其实只是单纯的传传文章的话,其实只需要执行<br>hexo d<br>hexo g<br>但是有的时候,比如改动外观之类的操作,建议还是先之星hexo clean 操作比较好,这里其实建议每次上传都执行以下clean,g,d这套组合拳.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="404页面的利用-改"><a href="#404页面的利用-改" class="headerlink" title="404页面的利用(改)"></a>404页面的利用(改)</h4>本来404页面其实是可以修改的,GitHub Pages 自定义404页面非常容易，直接在根目录下创建自己的404.html就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。<br>但是这里有个东西就很坑爹了,最近关注了些安全方面的问题,有很多黑客在公益404上挂马,还有什么跳转挂马之类的,总之现在的404貌似不是很安全,建议还是别弄了.</li>
-</ul>
-<hr>
-<h3 id="推荐个MD编辑器"><a href="#推荐个MD编辑器" class="headerlink" title="推荐个MD编辑器"></a>推荐个MD编辑器</h3><p><a href="https://atom.io/" target="_blank" rel="external">https://atom.io/</a>  atom这个编辑器我以前就在用的确好用</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/博客搭建/">博客搭建</a><a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/03/17/关于hexo搭建微博中遇到的坑/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/17/关于hexo搭建微博中遇到的坑/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/03/16/寻找单身狗-二/" title="寻找单身狗(二)" itemprop="url">寻找单身狗(二)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-03-16T12:01:46.000Z" itemprop="datePublished"> Published 2016-03-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>然而算法这个东西撇开实际操作的话,就没有什么意义了,这让我想到赶快找到一个案例来快速的使用上我们的算法,也让我打开了一本中途弃读的书.(以前感觉自己段位不够,现在可能也不够….)</p>
-<hr>
-<p>其中问题如下:<br><blockquote><p>有很多服务器存储数据，假设一个机器仅存储一个标号为ID的记录，假设机器总量在10亿以下且ID是小于10亿的整数，假设每份数据保存两个备份，这样就有两个机器存储了同样的数据。</p>
-<p>问题是：<br>1.假设在某个时间得到一个数据文件ID的列表，是否能快速地找出表中仅出现一次的ID？即快速找出出现故障的机器存储的数据ID。</p>
-<p>2.如果有两台机器出现故障呢？（假设存储同一份数据的两台机器不会同时出现故障，即列表中缺少的是两个不等的ID）</p>
-<footer><strong>快速找出故障机器</strong><cite>编程之美</cite></footer></blockquote><br>我们回顾一下上一篇单身狗的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if (array.length == 0)</div><div class="line">return -1;</div><div class="line">int x = 0;</div><div class="line">for (int i = 0; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">return x;</div></pre></td></tr></table></figure><br>这里我们一眼就能看出我们的代码非常适合问题一,这个也就是书上的思路三的一部分,他已经是一个相对较好的解决方案了.我们现在就来对比一下书上的其他思路.</p>
-<hr>
-<h2 id="对比-优化-升级"><a href="#对比-优化-升级" class="headerlink" title="对比,优化,升级"></a>对比,优化,升级</h2><h3 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h3><p>遍历序列,引入第二个数组 ,来记录每个id的出现的次数,遍历完毕后,再在整个数组上查询计数为1的那只单身狗.这样来看时间复杂度为O(N),空间复杂度为O(N).(空间复杂度的思想很重要~)<br>当然在这种情况问题二易得出.</p>
-<hr>
-<h3 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h3><p>思路二是思路一的升级版,就是优化他的计数数组,使用哈希表,每当一个数字出现两次,就从表中删除掉这些成对出现的数(FFF),这样的确可以有效节约空间复杂度,但是从最坏情况来看,时间复杂度,空间复杂度依然是O(N).<br>当然在这种情况问题二也易得出.</p>
-<hr>
-<h3 id="思路三-也就是我们的思路"><a href="#思路三-也就是我们的思路" class="headerlink" title="思路三(也就是我们的思路)"></a>思路三(也就是我们的思路)</h3><p>因为异或只需要占用有限的存储空间,所以我们可以轻易的将空间复杂度降低为O(n),这里也体现了我们的高瞻远瞩~<br>但是要解决问题二我们就相对复杂一些,这里我们可以做分类讨论,因为若是a=b,则我们可以通过求和的方式得出.若a!=b 则我们可以则a^b其中某一位上为1,也可通过数学方法的出a,b.</p>
-<hr>
-<h3 id="思路四"><a href="#思路四" class="headerlink" title="思路四"></a>思路四</h3><p>这里我认为是对思路三的优化,直接预存ID的和,与ID的乘积(还提供了平方差的思路),然后不需要分类讨论就可以快速得到a,b的值.(而且感觉也脱离的只能寻找1或者2个数的困境???存疑)</p>
-<hr>
-<h3 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h3><p>1.个人感觉位计算在很多地方还是有奇效的,希望以后自己多注意吧,不知道单身狗还有没有(三),有的话准备继续整理下位运算的案例.<br>2.然后就是程序设计要有算法追求还是建议一步一步来,优秀的代码都是有思维路线的,感觉想要一步到位,容易扯着蛋.<br>3.近期也拿起来了一些以前买的书(这都是欠的债啊),希望以后多写点读书总结.</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/思路拓展/">思路拓展</a><a href="/tags/读书笔记/">读书笔记</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/03/16/寻找单身狗-二/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/16/寻找单身狗-二/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/03/14/每日一题-1/" title="寻找单身狗(一)" itemprop="url">寻找单身狗(一)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-03-14T14:38:25.000Z" itemprop="datePublished"> Published 2016-03-14</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>群里有个每日一题是这样的:<br><blockquote><p>一个Int型数组，里面的每一个数都是成双成对的，只有一个数是单身狗，找出这个数，算法复杂度&lt;= O(n)</p>
-<footer><strong>群主大大</strong></footer></blockquote></p>
-<h2 id="千里之行属于足下"><a href="#千里之行属于足下" class="headerlink" title="千里之行属于足下"></a>千里之行属于足下</h2><p>,刚开始拿到这个问题,我直接没去关注后面的算法复杂度,因为我感觉解决问题遵循的应该是这么一个原则:<strong>拿到一个问题刚开始不要去思考什么高等方案,而是先找出能够解决的方案</strong>,按照正常思路我一下就得到了这个问题的基础解.</p>
-<h3 id="思路一穷举"><a href="#思路一穷举" class="headerlink" title="思路一穷举"></a>思路一穷举</h3><p>正常思想无非就是就是双层循环,然后每个数之间进行对比,然后找到那个单身狗,然后跳出循环.这里的代码就不贴了,应该大家都会的,但是明显不符合题意,这里的时间复杂度应该是O(n的平方)</p>
-<p>然后我就开始进入优化思考了,然后习惯性的把思路带入了那些比较经典的排序查找,但是仔细一思索,还是按照这个思路来,怎么也无法将复杂度降到O(n),在这个时候群里的其他朋友站了出来</p>
-<h3 id="思路二位运算"><a href="#思路二位运算" class="headerlink" title="思路二位运算"></a>思路二位运算</h3><p>这群里的一位大神给出的答案<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int x = array[0];</div><div class="line">for (int i = 1; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">NSLog(@&quot;%li&quot;, x);</div></pre></td></tr></table></figure><br>长时间不接触位运算,乍一看还是有点糊涂的,但是看了会大致明白了,是利用了<strong>问题的特性</strong>,都是双数,单身狗只有一只,这样做位运算单身狗的确无所遁形,而且时间复杂度也降落到了O(n),精彩的解答.</p>
-<h3 id="查漏补缺"><a href="#查漏补缺" class="headerlink" title="查漏补缺"></a>查漏补缺</h3><p>虽然上面的代码看起来已经非常好了,但其实还是有些问题的,那就是没有考虑异常情况,这里数组中没有元素,数组中只有一个元素的情况都是有可能发生的,(这让我想起了独自一人在公司加班到深夜的程序员形象),所以代码最后成型应该是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if (array.length == 0)</div><div class="line">  return -1;</div><div class="line">int x = 0;</div><div class="line">for (int i = 0; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">return x;</div></pre></td></tr></table></figure><br>这样形成的代码应该就是算法的较优解了.</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/思路拓展/">思路拓展</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/03/14/每日一题-1/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/14/每日一题-1/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -813,7 +461,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
@@ -833,10 +481,6 @@
 			
 		
 			
-				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
@@ -845,15 +489,11 @@
 			
 		
 			
-				<li><a href="/tags/位运算/" title="位运算">位运算<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
 			
 		
 			
@@ -861,7 +501,15 @@
 			
 		
 			
-				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/位运算/" title="位运算">位运算<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -873,7 +521,7 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">Tag Cloud</p>
+    <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 15px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 15px;">重构</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
     </div>
@@ -1023,7 +671,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
