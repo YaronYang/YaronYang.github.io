@@ -12,18 +12,18 @@
 
     
     <meta name="description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
-翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
+翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)Swift Programming Language EvolutionBefore you initiate a pull request,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift 4.0 官方进程文档翻译(该来的还是要来的)">
 <meta property="og:url" content="http://yaronyang.com/2016/10/17/Swift-4-0-该来的还是要来的/index.html">
 <meta property="og:site_name" content="YaronYang's Blog">
 <meta property="og:description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
-翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
-<meta property="og:updated_time" content="2016-10-17T04:16:10.000Z">
+翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)Swift Programming Language EvolutionBefore you initiate a pull request,">
+<meta property="og:updated_time" content="2016-10-18T01:36:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 4.0 官方进程文档翻译(该来的还是要来的)">
 <meta name="twitter:description" content="原文链接https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40
-翻译跟自己的些理解Swift Programming Language EvolutionBefore you initiate a pull request, please read the">
+翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)Swift Programming Language EvolutionBefore you initiate a pull request,">
 
     
     <link rel="alternative" href="/atom.xml" title="YaronYang&#39;s Blog" type="application/atom+xml">
@@ -51,7 +51,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -90,30 +90,30 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> 发表于 2016-10-17</time>
+    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> 發表於 2016-10-17</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#翻译跟自己的些理解"><span class="toc-number">2.</span> <span class="toc-text">翻译跟自己的些理解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-Programming-Language-Evolution"><span class="toc-number"></span> <span class="toc-text">Swift Programming Language Evolution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-major-version-Swift-4-0"><span class="toc-number">1.</span> <span class="toc-text">Development major version:  Swift 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift开发主要版本-4-0"><span class="toc-number">2.</span> <span class="toc-text">Swift开发主要版本 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Previous-releases"><span class="toc-number">3.</span> <span class="toc-text">Previous releases</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#翻译跟自己的些理解-辛苦翻译-转载注明出处谢谢"><span class="toc-number">2.</span> <span class="toc-text">翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-Programming-Language-Evolution"><span class="toc-number"></span> <span class="toc-text">Swift Programming Language Evolution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-major-version-Swift-4-0"><span class="toc-number">1.</span> <span class="toc-text">Development major version:  Swift 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift开发主要版本-4-0"><span class="toc-number">2.</span> <span class="toc-text">Swift开发主要版本 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Previous-releases"><span class="toc-number">3.</span> <span class="toc-text">Previous releases</span></a></li></ol>
 		
 		</div>
 		
 		<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p><a href="https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40" target="_blank" rel="external">https://github.com/apple/swift-evolution/blob/master/README.md#development-major-version--swift-40</a></p>
-<h2 id="翻译跟自己的些理解"><a href="#翻译跟自己的些理解" class="headerlink" title="翻译跟自己的些理解"></a>翻译跟自己的些理解</h2><h1 id="Swift-Programming-Language-Evolution"><a href="#Swift-Programming-Language-Evolution" class="headerlink" title="Swift Programming Language Evolution"></a>Swift Programming Language Evolution</h1><p><strong>Before you initiate a pull request</strong>, please read the process document. Ideas should be thoroughly discussed on the <a href="https://swift.org/community/#swift-evolution" target="_blank" rel="external">swift-evolution mailing list</a> first.<br>在你进行合并请求前,请阅读进程文档,你的想法需要被大家在[swift-evolution mailing list]中讨论后,(你再提出合并请求.PS:很傲娇啊,别老是烦我)</p>
+<h2 id="翻译跟自己的些理解-辛苦翻译-转载注明出处谢谢"><a href="#翻译跟自己的些理解-辛苦翻译-转载注明出处谢谢" class="headerlink" title="翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)"></a>翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)</h2><h1 id="Swift-Programming-Language-Evolution"><a href="#Swift-Programming-Language-Evolution" class="headerlink" title="Swift Programming Language Evolution"></a>Swift Programming Language Evolution</h1><p><strong>Before you initiate a pull request</strong>, please read the process document. Ideas should be thoroughly discussed on the <a href="https://swift.org/community/#swift-evolution" target="_blank" rel="external">swift-evolution mailing list</a> first.<br>在你进行合并请求前,请阅读进程文档,你的想法需要被大家在[swift-evolution mailing list]中讨论后,(你再提出合并请求.PS:很傲娇啊,别老是烦我)</p>
 <p>This repository tracks the ongoing evolution of Swift. It contains:<br>这个仓库会跟踪SWift4.0的持续发展,它包括:</p>
 <ul>
 <li>Goals for upcoming Swift releases (this document).</li>
 <li>马上就要发布的Swift版本变化的目标.</li>
-<li>The <a href="https://apple.github.io/swift-evolution/" target="_blank" rel="external">Swift evolution review status</a> tracking proposals to change Swift.</li>
+<li>The Swift evolution review status tracking proposals to change Swift.</li>
 <li>Swift新版本大家对他的评论以及改变状态.</li>
-<li>The <a href="process.md">Swift evolution process</a> that governs the evolution of Swift.</li>
+<li>The Swift evolution process that governs the evolution of Swift.</li>
 <li>Swift的演变与进化过程.</li>
-<li><a href="commonly_proposed.md">Commonly Rejected Changes</a>, proposals which have been denied in the past.</li>
+<li>Commonly Rejected Changes, proposals which have been denied in the past.</li>
 <li>经常被拒绝的修改方法与提案(PS:让你死的心服口服)</li>
 </ul>
 <p>This document describes goals for the Swift language on a per-release basis, usually listing minor releases adding to the currently shipping version and one major release out.  Each release will have many smaller features or changes independent of these larger goals, and not all goals are reached for each release.</p>
@@ -147,8 +147,8 @@
 </li>
 </ul>
 <h2 id="Previous-releases"><a href="#Previous-releases" class="headerlink" title="Previous releases"></a>Previous releases</h2><ul>
-<li><a href="releases/swift-3_0.md">Swift 3.0</a> - Released on September 13, 2016</li>
-<li><a href="releases/swift-2_2.md">Swift 2.2</a> - Released on March 21, 2016</li>
+<li>Swift 3.0 - Released on September 13, 2016</li>
+<li>Swift 2.2 - Released on March 21, 2016</li>
 </ul>
   
 	</div>
@@ -198,17 +198,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#翻译跟自己的些理解"><span class="toc-number">2.</span> <span class="toc-text">翻译跟自己的些理解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-Programming-Language-Evolution"><span class="toc-number"></span> <span class="toc-text">Swift Programming Language Evolution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-major-version-Swift-4-0"><span class="toc-number">1.</span> <span class="toc-text">Development major version:  Swift 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift开发主要版本-4-0"><span class="toc-number">2.</span> <span class="toc-text">Swift开发主要版本 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Previous-releases"><span class="toc-number">3.</span> <span class="toc-text">Previous releases</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原文链接"><span class="toc-number">1.</span> <span class="toc-text">原文链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#翻译跟自己的些理解-辛苦翻译-转载注明出处谢谢"><span class="toc-number">2.</span> <span class="toc-text">翻译跟自己的些理解(辛苦翻译 转载注明出处谢谢~)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Swift-Programming-Language-Evolution"><span class="toc-number"></span> <span class="toc-text">Swift Programming Language Evolution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-major-version-Swift-4-0"><span class="toc-number">1.</span> <span class="toc-text">Development major version:  Swift 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swift开发主要版本-4-0"><span class="toc-number">2.</span> <span class="toc-text">Swift开发主要版本 4.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Previous-releases"><span class="toc-number">3.</span> <span class="toc-text">Previous releases</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -218,7 +218,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
@@ -242,19 +242,19 @@
 			
 		
 			
-				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
 			
 		
 			
@@ -270,7 +270,7 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">标签云</p>
+    <p class="asidetitle">標簽雲</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 13.33px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 16.67px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 13.33px;">重构</a>
     </div>
@@ -509,7 +509,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
