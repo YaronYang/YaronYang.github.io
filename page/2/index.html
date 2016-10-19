@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yaronyang.com">
 					</form>
 					
@@ -81,6 +81,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/09/03/重构-读书笔记-一/" title="重构 读书笔记(一)" itemprop="url">重构 读书笔记(一)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-03T07:47:39.000Z" itemprop="datePublished"> 發表於 2016-09-03</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="1-为什么重构"><a href="#1-为什么重构" class="headerlink" title="1.为什么重构"></a>1.为什么重构</h2><p>虽然书上提到了重构中提到了可以提高理解性,但我认为重构的主要目的还是为了提高程序的延展性,降低了程序的修改成本,其中的一些思想与代码看起来真的跟艺术一样.</p>
+<h2 id="2-重构离不开测试"><a href="#2-重构离不开测试" class="headerlink" title="2.重构离不开测试"></a>2.重构离不开测试</h2><p>因为重构代码是为了让代码更好地服务与我们.而不是添麻烦.所以一定要构建良好的测试方法,<strong>测试方法必须要有自我检验能力.</strong>使得重构前后程序所得到的结果保持一致.而且在重构中建议将步子放的小一些,<strong>重构技术就是以微小的步伐修改程序.</strong></p>
+<h2 id="3-优秀的程序员写代码给人看"><a href="#3-优秀的程序员写代码给人看" class="headerlink" title="3.优秀的程序员写代码给人看"></a>3.优秀的程序员写代码给人看</h2><p>在我的理解,这里感觉重构过度会降低代码的理解性,因为他会分割逻辑.但是重构的确会带来条理明确的代码.(我个人认为这两条不矛盾),通过重构能够保证每次运算都是在变量的声明层,的确是易于维护.也许是我思想转不过弯来,有待后续提高.</p>
+<h2 id="4-第一个实例中所运用的技巧"><a href="#4-第一个实例中所运用的技巧" class="headerlink" title="4.第一个实例中所运用的技巧"></a>4.第一个实例中所运用的技巧</h2><h3 id="1-减少跨越"><a href="#1-减少跨越" class="headerlink" title="(1)减少跨越"></a>(1)减少跨越</h3><p>将顾客电影商家三者三者联系解耦,建立了顾客-&gt;商家-&gt;电影的一对一的联系,尽量减少隔层跨越,使用商家成为顾客,电影的纽带,感觉这个模型非常像MVC模型的简化版,这也说明了设计思想是共通的.</p>
+<h3 id="2-减少临时变量与修改变量名"><a href="#2-减少临时变量与修改变量名" class="headerlink" title="(2)减少临时变量与修改变量名"></a>(2)减少临时变量与修改变量名</h3><p>这里减少了大量的临时变量,减少了数据的传递,在性能上有优化但不多,主要还是为了减少传递,但是我个人认为一些便于理解的变量名还是有利于程序后续开发的,当然也可以用注释来替代.<br>同时修改刚才解耦后的变量名,这我就认为是老生常谈了,但是一个贴合变量的变量名的确是非常有用的.</p>
+<h3 id="3-高屋建瓴来优化性能"><a href="#3-高屋建瓴来优化性能" class="headerlink" title="(3)高屋建瓴来优化性能"></a>(3)高屋建瓴来优化性能</h3><p>看到这里感触还是很大的,的确是大量重构之后,的确是会可能出现性能降低的问题.但是真的变得非常好解决了,高度重构的代码只需要一些很简单的方法就可以避免性能问题,甚至提升性能,的确是把复杂问题变成了多个简单问题.</p>
+<h3 id="4-重构过程中的一些小技巧"><a href="#4-重构过程中的一些小技巧" class="headerlink" title="(4)重构过程中的一些小技巧"></a>(4)重构过程中的一些小技巧</h3><p>举几个例子,就比如拆分函数,需要观察函数中的相对常量,相对变量,变量可以作为返回值等,这些就不一一列举了.</p>
+<h2 id="综上"><a href="#综上" class="headerlink" title="综上"></a>综上</h2><p>这本书的确是一本开卷有益的好书,第一个例子非常小,就是一个简单地大学课后题的程序,竟然就是写了50多页,的确是应了作者说的随便一个例子100多页(刚开始还真以为有点吹啊),虽然程序很小,但是透露出来的思想的确是非常的棒,这本书买的绝对是值了.</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/读书笔记/">读书笔记</a><a href="/tags/重构/">重构</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/09/03/重构-读书笔记-一/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/09/03/重构-读书笔记-一/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/08/16/wing-win-cndota-bestdota/" title="WINGS!WIN!CN DOTA BEST DOTA!" itemprop="url">WINGS!WIN!CN DOTA BEST DOTA!</a>
   </h1>
   <p class="article-author">By
@@ -88,7 +153,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-16T01:04:42.000Z" itemprop="datePublished"> Published 2016-08-16</time>
+    <time datetime="2016-08-16T01:04:42.000Z" itemprop="datePublished"> 發表於 2016-08-16</time>
     
   </p>
 </header>
@@ -152,7 +217,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> Published 2016-04-12</time>
+    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> 發表於 2016-04-12</time>
     
   </p>
 </header>
@@ -217,7 +282,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-03-23T01:52:45.000Z" itemprop="datePublished"> Published 2016-03-23</time>
+    <time datetime="2016-03-23T01:52:45.000Z" itemprop="datePublished"> 發表於 2016-03-23</time>
     
   </p>
 </header>
@@ -280,7 +345,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-03-17T06:41:44.000Z" itemprop="datePublished"> Published 2016-03-17</time>
+    <time datetime="2016-03-17T06:41:44.000Z" itemprop="datePublished"> 發表於 2016-03-17</time>
     
   </p>
 </header>
@@ -358,89 +423,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/03/16/寻找单身狗-二/" title="寻找单身狗(二)" itemprop="url">寻找单身狗(二)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-03-16T12:01:46.000Z" itemprop="datePublished"> Published 2016-03-16</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>然而算法这个东西撇开实际操作的话,就没有什么意义了,这让我想到赶快找到一个案例来快速的使用上我们的算法,也让我打开了一本中途弃读的书.(以前感觉自己段位不够,现在可能也不够….)</p>
-<hr>
-<p>其中问题如下:<br><blockquote><p>有很多服务器存储数据，假设一个机器仅存储一个标号为ID的记录，假设机器总量在10亿以下且ID是小于10亿的整数，假设每份数据保存两个备份，这样就有两个机器存储了同样的数据。</p>
-<p>问题是：<br>1.假设在某个时间得到一个数据文件ID的列表，是否能快速地找出表中仅出现一次的ID？即快速找出出现故障的机器存储的数据ID。</p>
-<p>2.如果有两台机器出现故障呢？（假设存储同一份数据的两台机器不会同时出现故障，即列表中缺少的是两个不等的ID）</p>
-<footer><strong>快速找出故障机器</strong><cite>编程之美</cite></footer></blockquote><br>我们回顾一下上一篇单身狗的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if (array.length == 0)</div><div class="line">return -1;</div><div class="line">int x = 0;</div><div class="line">for (int i = 0; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">return x;</div></pre></td></tr></table></figure><br>这里我们一眼就能看出我们的代码非常适合问题一,这个也就是书上的思路三的一部分,他已经是一个相对较好的解决方案了.我们现在就来对比一下书上的其他思路.</p>
-<hr>
-<h2 id="对比-优化-升级"><a href="#对比-优化-升级" class="headerlink" title="对比,优化,升级"></a>对比,优化,升级</h2><h3 id="思路一"><a href="#思路一" class="headerlink" title="思路一"></a>思路一</h3><p>遍历序列,引入第二个数组 ,来记录每个id的出现的次数,遍历完毕后,再在整个数组上查询计数为1的那只单身狗.这样来看时间复杂度为O(N),空间复杂度为O(N).(空间复杂度的思想很重要~)<br>当然在这种情况问题二易得出.</p>
-<hr>
-<h3 id="思路二"><a href="#思路二" class="headerlink" title="思路二"></a>思路二</h3><p>思路二是思路一的升级版,就是优化他的计数数组,使用哈希表,每当一个数字出现两次,就从表中删除掉这些成对出现的数(FFF),这样的确可以有效节约空间复杂度,但是从最坏情况来看,时间复杂度,空间复杂度依然是O(N).<br>当然在这种情况问题二也易得出.</p>
-<hr>
-<h3 id="思路三-也就是我们的思路"><a href="#思路三-也就是我们的思路" class="headerlink" title="思路三(也就是我们的思路)"></a>思路三(也就是我们的思路)</h3><p>因为异或只需要占用有限的存储空间,所以我们可以轻易的将空间复杂度降低为O(n),这里也体现了我们的高瞻远瞩~<br>但是要解决问题二我们就相对复杂一些,这里我们可以做分类讨论,因为若是a=b,则我们可以通过求和的方式得出.若a!=b 则我们可以则a^b其中某一位上为1,也可通过数学方法的出a,b.</p>
-<hr>
-<h3 id="思路四"><a href="#思路四" class="headerlink" title="思路四"></a>思路四</h3><p>这里我认为是对思路三的优化,直接预存ID的和,与ID的乘积(还提供了平方差的思路),然后不需要分类讨论就可以快速得到a,b的值.(而且感觉也脱离的只能寻找1或者2个数的困境???存疑)</p>
-<hr>
-<h3 id="小总结"><a href="#小总结" class="headerlink" title="小总结"></a>小总结</h3><p>1.个人感觉位计算在很多地方还是有奇效的,希望以后自己多注意吧,不知道单身狗还有没有(三),有的话准备继续整理下位运算的案例.<br>2.然后就是程序设计要有算法追求还是建议一步一步来,优秀的代码都是有思维路线的,感觉想要一步到位,容易扯着蛋.<br>3.近期也拿起来了一些以前买的书(这都是欠的债啊),希望以后多写点读书总结.</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/思路拓展/">思路拓展</a><a href="/tags/读书笔记/">读书笔记</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/03/16/寻找单身狗-二/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/16/寻找单身狗-二/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -450,7 +442,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
@@ -462,7 +454,7 @@
 			
 		
 			
-				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
 			
 		
 			
@@ -470,23 +462,11 @@
 			
 		
 			
-				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
 			
 		
 			
@@ -498,7 +478,19 @@
 			
 		
 			
+				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/编程之美/" title="编程之美">编程之美<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -510,7 +502,7 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">Tag Cloud</p>
+    <p class="asidetitle">標簽雲</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 15px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 15px;">重构</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
     </div>
@@ -660,7 +652,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

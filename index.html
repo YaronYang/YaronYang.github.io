@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yaronyang.com">
 					</form>
 					
@@ -88,7 +88,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-18T03:30:30.000Z" itemprop="datePublished"> Published 2016-10-18</time>
+    <time datetime="2016-10-18T03:30:30.000Z" itemprop="datePublished"> 發表於 2016-10-18</time>
     
   </p>
 </header>
@@ -152,7 +152,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> Published 2016-10-17</time>
+    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> 發表於 2016-10-17</time>
     
   </p>
 </header>
@@ -249,6 +249,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/10/02/iOS-10-适配问题/" title="iOS 10 适配问题" itemprop="url">iOS 10 适配问题</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-02T01:52:56.000Z" itemprop="datePublished"> 發表於 2016-10-02</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>最近发生了点事情 ,感觉状态并不佳,因为家里的事来回奔波在家乡与北京,也经历了一些第一次,总之希望万事顺利吧.</p>
+<p>废话不多说,我们来看看iOS10的适配问题</p>
+<h2 id="iOS-10的一些新特性"><a href="#iOS-10的一些新特性" class="headerlink" title="iOS 10的一些新特性"></a>iOS 10的一些新特性</h2><h4 id="通知框架"><a href="#通知框架" class="headerlink" title="通知框架"></a>通知框架</h4><p>这次通知框架的重构真是做的不错,再也不是散散的那种感觉了,不过因为通知框架的重构,也带来了一些iOS10的适配问题,不过问题不大,但是还是想仔细研究一下这个通知框架,感觉会很好玩.</p>
+<h4 id="iOS-10-弃用新增的一些方法"><a href="#iOS-10-弃用新增的一些方法" class="headerlink" title="iOS 10 弃用新增的一些方法"></a>iOS 10 弃用新增的一些方法</h4><p>感觉新增的方法还蛮有新意的,而且貌似还优化了CollectView,这个算是普天同庆了,但是感觉新增的方法看看就好,还是关注下启用的方法吧,比如UIStatusBar的方法已经过期了.</p>
+<h4 id="ATS问题"><a href="#ATS问题" class="headerlink" title="ATS问题"></a>ATS问题</h4><p>现在iOS10对于隐私的保护更为严格了,其实在iOS9中我们就可以看出HTTP被禁用了,但是我们其实可以修改允许使用的,但是在10中彻底不让用了,而且据苹果说会在明年1月1号彻底停止绕过ATS,今年审核也是原则上不通过,你们自己看着办吧.</p>
+<p>####Siri跟进一步<br>以后的Siri就不是一个没事无聊才逗逗的玩具了,苹果不止一次的表现出了在语音方面的野心,每个版本都在不停的加强Siri,现在的Siri以及可以收款付款,约车,搜索照片了.以后Siri可能还能做更多事,潜力很大,话说以后会不会出现iOS工程师(Siri方向),笑.</p>
+<p>####主动建议<br>貌似iOS 10 还支持了类似于安卓的用户习惯引导,这个还是蛮不错的,要是好的话准备试一试了.</p>
+<h2 id="我遇到的一些坑"><a href="#我遇到的一些坑" class="headerlink" title="我遇到的一些坑"></a>我遇到的一些坑</h2><h4 id="Notification-通知框架"><a href="#Notification-通知框架" class="headerlink" title="Notification(通知框架)"></a>Notification(通知框架)</h4><p>这个新更新了,感觉就是不一样,小卖部变商场了,还是准备写一篇专门的总结,这里不写了,没写的,再填坑.</p>
+<h4 id="ATS问题-1"><a href="#ATS问题-1" class="headerlink" title="ATS问题"></a>ATS问题</h4><p>这有大神的文章,我就不献丑了<br><a href="https://onevcat.com/2016/06/ios-10-ats/" target="_blank" rel="external">https://onevcat.com/2016/06/ios-10-ats/</a> 喵神写的ATS的文章<br>拜读之后受益匪浅</p>
+<h4 id="隐私权限"><a href="#隐私权限" class="headerlink" title="隐私权限"></a>隐私权限</h4><p>刚开始发现app直接崩溃有点吓人,后来发现是隐私权限没有配置,这个在info.plist中就可以配,当然写代码配置也是阔以滴.</p>
+<h4 id="判断版本"><a href="#判断版本" class="headerlink" title="判断版本"></a>判断版本</h4><p>在这里推荐使用<br>[[UIDevice currentDevice] systemVersion].floatValue,<br>[[UIDevice currentDevice] systemVersion]<br>这两个方法俩判断,结果都是10.0,我这里用的第一个,但是貌似还有人用[[[[UIDevice currentDevice] systemVersion] substringToIndex:1] integerValue]判断这个一是长(虽然都是粘贴,但是看着烦),而是版本返回竟然是1….,当然你要是依旧爱着它,那你就去改判断条件(不过那样是真蠢.)</p>
+<h4 id="XIB问题"><a href="#XIB问题" class="headerlink" title="XIB问题"></a>XIB问题</h4><p>XIB貌似进去XCode8的时候点了一下,忘了是啥了就全好了,不过我看文章有反应退回Xcode7中XIB就不能用了的事,貌似可以删除XIB中</p>
+<p><capability name="documents saved in the Xcode 8 format" mintoolsversion="8.0"><br>但是更新了就更新了,认命向前看吧,少年!</capability></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/10/02/iOS-10-适配问题/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/10/02/iOS-10-适配问题/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/09/23/Disqus-竟然被墙了/" title="Disqus 竟然被墙了" itemprop="url">Disqus 竟然被墙了</a>
   </h1>
   <p class="article-author">By
@@ -256,7 +321,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-23T01:40:06.000Z" itemprop="datePublished"> Published 2016-09-23</time>
+    <time datetime="2016-09-23T01:40:06.000Z" itemprop="datePublished"> 發表於 2016-09-23</time>
     
   </p>
 </header>
@@ -315,7 +380,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> Published 2016-09-11</time>
+    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> 發表於 2016-09-11</time>
     
   </p>
 </header>
@@ -377,81 +442,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/03/重构-读书笔记-一/" title="重构 读书笔记(一)" itemprop="url">重构 读书笔记(一)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-03T07:47:39.000Z" itemprop="datePublished"> Published 2016-09-03</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="1-为什么重构"><a href="#1-为什么重构" class="headerlink" title="1.为什么重构"></a>1.为什么重构</h2><p>虽然书上提到了重构中提到了可以提高理解性,但我认为重构的主要目的还是为了提高程序的延展性,降低了程序的修改成本,其中的一些思想与代码看起来真的跟艺术一样.</p>
-<h2 id="2-重构离不开测试"><a href="#2-重构离不开测试" class="headerlink" title="2.重构离不开测试"></a>2.重构离不开测试</h2><p>因为重构代码是为了让代码更好地服务与我们.而不是添麻烦.所以一定要构建良好的测试方法,<strong>测试方法必须要有自我检验能力.</strong>使得重构前后程序所得到的结果保持一致.而且在重构中建议将步子放的小一些,<strong>重构技术就是以微小的步伐修改程序.</strong></p>
-<h2 id="3-优秀的程序员写代码给人看"><a href="#3-优秀的程序员写代码给人看" class="headerlink" title="3.优秀的程序员写代码给人看"></a>3.优秀的程序员写代码给人看</h2><p>在我的理解,这里感觉重构过度会降低代码的理解性,因为他会分割逻辑.但是重构的确会带来条理明确的代码.(我个人认为这两条不矛盾),通过重构能够保证每次运算都是在变量的声明层,的确是易于维护.也许是我思想转不过弯来,有待后续提高.</p>
-<h2 id="4-第一个实例中所运用的技巧"><a href="#4-第一个实例中所运用的技巧" class="headerlink" title="4.第一个实例中所运用的技巧"></a>4.第一个实例中所运用的技巧</h2><h3 id="1-减少跨越"><a href="#1-减少跨越" class="headerlink" title="(1)减少跨越"></a>(1)减少跨越</h3><p>将顾客电影商家三者三者联系解耦,建立了顾客-&gt;商家-&gt;电影的一对一的联系,尽量减少隔层跨越,使用商家成为顾客,电影的纽带,感觉这个模型非常像MVC模型的简化版,这也说明了设计思想是共通的.</p>
-<h3 id="2-减少临时变量与修改变量名"><a href="#2-减少临时变量与修改变量名" class="headerlink" title="(2)减少临时变量与修改变量名"></a>(2)减少临时变量与修改变量名</h3><p>这里减少了大量的临时变量,减少了数据的传递,在性能上有优化但不多,主要还是为了减少传递,但是我个人认为一些便于理解的变量名还是有利于程序后续开发的,当然也可以用注释来替代.<br>同时修改刚才解耦后的变量名,这我就认为是老生常谈了,但是一个贴合变量的变量名的确是非常有用的.</p>
-<h3 id="3-高屋建瓴来优化性能"><a href="#3-高屋建瓴来优化性能" class="headerlink" title="(3)高屋建瓴来优化性能"></a>(3)高屋建瓴来优化性能</h3><p>看到这里感触还是很大的,的确是大量重构之后,的确是会可能出现性能降低的问题.但是真的变得非常好解决了,高度重构的代码只需要一些很简单的方法就可以避免性能问题,甚至提升性能,的确是把复杂问题变成了多个简单问题.</p>
-<h3 id="4-重构过程中的一些小技巧"><a href="#4-重构过程中的一些小技巧" class="headerlink" title="(4)重构过程中的一些小技巧"></a>(4)重构过程中的一些小技巧</h3><p>举几个例子,就比如拆分函数,需要观察函数中的相对常量,相对变量,变量可以作为返回值等,这些就不一一列举了.</p>
-<h2 id="综上"><a href="#综上" class="headerlink" title="综上"></a>综上</h2><p>这本书的确是一本开卷有益的好书,第一个例子非常小,就是一个简单地大学课后题的程序,竟然就是写了50多页,的确是应了作者说的随便一个例子100多页(刚开始还真以为有点吹啊),虽然程序很小,但是透露出来的思想的确是非常的棒,这本书买的绝对是值了.</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/读书笔记/">读书笔记</a><a href="/tags/重构/">重构</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/09/03/重构-读书笔记-一/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/09/03/重构-读书笔记-一/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -461,7 +461,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
@@ -473,7 +473,7 @@
 			
 		
 			
-				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
 			
 		
 			
@@ -481,23 +481,11 @@
 			
 		
 			
-				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
 			
 		
 			
@@ -509,7 +497,19 @@
 			
 		
 			
+				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/编程之美/" title="编程之美">编程之美<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/通告/" title="通告">通告<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -521,7 +521,7 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">Tag Cloud</p>
+    <p class="asidetitle">標簽雲</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 15px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 15px;">重构</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
     </div>
@@ -671,7 +671,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
