@@ -4,32 +4,22 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>寻找单身狗(一) | YaronYang&#39;s Blog</title>
+    <title>YaronYang&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="YaronYang">
     
 
     
-    <meta name="description" content="群里有个每日一题是这样的:一个Int型数组，里面的每一个数都是成双成对的，只有一个数是单身狗，找出这个数，算法复杂度&amp;lt;= O(n)
-群主大大
-千里之行属于足下,刚开始拿到这个问题,我直接没去关注后面的算法复杂度,因为我感觉解决问题遵循的应该是这么一个原则:拿到一个问题刚开始不要去思考什么高等方案,而是先找出能够解决的方案,按照正常思路我一下就得到了这个问题的基础解.
-思路一穷举正常思想无非就">
-<meta property="og:type" content="article">
-<meta property="og:title" content="寻找单身狗(一)">
-<meta property="og:url" content="http://yaronyang.com/2016/03/14/每日一题-1/index.html">
+    <meta name="description" content="A iOS Developer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YaronYang's Blog">
+<meta property="og:url" content="http://yaronyang.com/page/3/index.html">
 <meta property="og:site_name" content="YaronYang's Blog">
-<meta property="og:description" content="群里有个每日一题是这样的:一个Int型数组，里面的每一个数都是成双成对的，只有一个数是单身狗，找出这个数，算法复杂度&amp;lt;= O(n)
-群主大大
-千里之行属于足下,刚开始拿到这个问题,我直接没去关注后面的算法复杂度,因为我感觉解决问题遵循的应该是这么一个原则:拿到一个问题刚开始不要去思考什么高等方案,而是先找出能够解决的方案,按照正常思路我一下就得到了这个问题的基础解.
-思路一穷举正常思想无非就">
-<meta property="og:updated_time" content="2016-10-14T00:40:05.000Z">
+<meta property="og:description" content="A iOS Developer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="寻找单身狗(一)">
-<meta name="twitter:description" content="群里有个每日一题是这样的:一个Int型数组，里面的每一个数都是成双成对的，只有一个数是单身狗，找出这个数，算法复杂度&amp;lt;= O(n)
-群主大大
-千里之行属于足下,刚开始拿到这个问题,我直接没去关注后面的算法复杂度,因为我感觉解决问题遵循的应该是这么一个原则:拿到一个问题刚开始不要去思考什么高等方案,而是先找出能够解决的方案,按照正常思路我一下就得到了这个问题的基础解.
-思路一穷举正常思想无非就">
+<meta name="twitter:title" content="YaronYang's Blog">
+<meta name="twitter:description" content="A iOS Developer">
 
     
     <link rel="alternative" href="/atom.xml" title="YaronYang&#39;s Blog" type="application/atom+xml">
@@ -83,10 +73,12 @@
 </div>
     </header>
     <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-  
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
+      <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/03/14/每日一题-1/" title="寻找单身狗(一)" itemprop="url">寻找单身狗(一)</a>
@@ -100,25 +92,23 @@
     
   </p>
 </header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#千里之行属于足下"><span class="toc-number">1.</span> <span class="toc-text">千里之行属于足下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路一穷举"><span class="toc-number">1.1.</span> <span class="toc-text">思路一穷举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路二位运算"><span class="toc-number">1.2.</span> <span class="toc-text">思路二位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查漏补缺"><span class="toc-number">1.3.</span> <span class="toc-text">查漏补缺</span></a></li></ol></li></ol>
-		
-		</div>
-		
-		<p>群里有个每日一题是这样的:<br><blockquote><p>一个Int型数组，里面的每一个数都是成双成对的，只有一个数是单身狗，找出这个数，算法复杂度&lt;= O(n)</p>
+    <div class="article-content">
+        
+        <p>群里有个每日一题是这样的:<br><blockquote><p>一个Int型数组，里面的每一个数都是成双成对的，只有一个数是单身狗，找出这个数，算法复杂度&lt;= O(n)</p>
 <footer><strong>群主大大</strong></footer></blockquote></p>
 <h2 id="千里之行属于足下"><a href="#千里之行属于足下" class="headerlink" title="千里之行属于足下"></a>千里之行属于足下</h2><p>,刚开始拿到这个问题,我直接没去关注后面的算法复杂度,因为我感觉解决问题遵循的应该是这么一个原则:<strong>拿到一个问题刚开始不要去思考什么高等方案,而是先找出能够解决的方案</strong>,按照正常思路我一下就得到了这个问题的基础解.</p>
 <h3 id="思路一穷举"><a href="#思路一穷举" class="headerlink" title="思路一穷举"></a>思路一穷举</h3><p>正常思想无非就是就是双层循环,然后每个数之间进行对比,然后找到那个单身狗,然后跳出循环.这里的代码就不贴了,应该大家都会的,但是明显不符合题意,这里的时间复杂度应该是O(n的平方)</p>
 <p>然后我就开始进入优化思考了,然后习惯性的把思路带入了那些比较经典的排序查找,但是仔细一思索,还是按照这个思路来,怎么也无法将复杂度降到O(n),在这个时候群里的其他朋友站了出来</p>
 <h3 id="思路二位运算"><a href="#思路二位运算" class="headerlink" title="思路二位运算"></a>思路二位运算</h3><p>这群里的一位大神给出的答案<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int x = array[0];</div><div class="line">for (int i = 1; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">NSLog(@&quot;%li&quot;, x);</div></pre></td></tr></table></figure><br>长时间不接触位运算,乍一看还是有点糊涂的,但是看了会大致明白了,是利用了<strong>问题的特性</strong>,都是双数,单身狗只有一只,这样做位运算单身狗的确无所遁形,而且时间复杂度也降落到了O(n),精彩的解答.</p>
 <h3 id="查漏补缺"><a href="#查漏补缺" class="headerlink" title="查漏补缺"></a>查漏补缺</h3><p>虽然上面的代码看起来已经非常好了,但其实还是有些问题的,那就是没有考虑异常情况,这里数组中没有元素,数组中只有一个元素的情况都是有可能发生的,(这让我想起了独自一人在公司加班到深夜的程序员形象),所以代码最后成型应该是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if (array.length == 0)</div><div class="line">  return -1;</div><div class="line">int x = 0;</div><div class="line">for (int i = 0; i &lt; array.count; i++) &#123;</div><div class="line">x = x ^ array[i];</div><div class="line">&#125;</div><div class="line">return x;</div></pre></td></tr></table></figure><br>这样形成的代码应该就是算法的较优解了.</p>
-  
-	</div>
-		<footer class="article-footer clearfix">
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -131,47 +121,31 @@
 
 
 
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://yaronyang.com/2016/03/14/每日一题-1/" data-title="寻找单身狗(一) | YaronYang&#39;s Blog" data-tsina="undefined" class="share clearfix">
-	  </div>
-	
-	</div>
 
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/03/14/每日一题-1/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/14/每日一题-1/" data-count-type="comments">&nbsp;</a>
+	
+</div>
 
 </footer>
 
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2016/03/16/寻找单身狗-二/" title="寻找单身狗(二)">
-  <strong>上一篇：</strong><br/>
-  <span>
-  寻找单身狗(二)</span>
-</a>
+
+    </article>
+
+
+
+
+
+
+
+  <nav id="page-nav" class="clearfix">
+    <a class="extend prev" rel="prev" href="/page/2/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 </div>
-
-
-</nav>
-
-	
-<section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/03/14/每日一题-1/" data-title="寻找单身狗(一)" data-url="http://yaronyang.com/2016/03/14/每日一题-1/"></div>
-</section>
-
-
-</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#千里之行属于足下"><span class="toc-number">1.</span> <span class="toc-text">千里之行属于足下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路一穷举"><span class="toc-number">1.1.</span> <span class="toc-text">思路一穷举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路二位运算"><span class="toc-number">1.2.</span> <span class="toc-text">思路二位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查漏补缺"><span class="toc-number">1.3.</span> <span class="toc-text">查漏补缺</span></a></li></ol></li></ol>
- 
-  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -335,103 +309,14 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
-      
-      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  c.click(function(){
-    ta.css('display', 'block').addClass('fadeIn');
-  });
-  o.click(function(){
-    ta.css('display', 'none');
-  });
-  $(window).scroll(function(){
-    ta.css("top",Math.max(140,320-$(this).scrollTop()));
-  });
-});
-</script>
 
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<div class="hoverqrcode clearfix"></div>',
-  '<a class="overlay" id="qrcode"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-
-  $('.hoverqrcode').hide();
-
-  var myWidth = 0;
-  function updatehoverqrcode(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-    var qrsize = myWidth > 1024 ? 200:100;
-    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
-    var p = $('.article-share-qrcode').position();
-    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
-                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
-                          .qrcode(options);
-  };
-  $(window).resize(function(){
-    $('.hoverqrcode').hide();
-  });
-  $('.article-share-qrcode').click(function(){
-    updatehoverqrcode();
-    $('.hoverqrcode').toggle();
-  });
-  $('.article-share-qrcode').hover(function(){}, function(){
-      $('.hoverqrcode').hide();
-  });
-});   
-</script>
-
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"YaronYang"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
 
 
 
@@ -500,4 +385,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
-</html>
+ </html>
