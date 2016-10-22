@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -81,6 +81,81 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/09/11/重构-读书笔记-二/" title="重构 读书笔记(二)" itemprop="url">重构 读书笔记(二)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-11T09:04:19.000Z" itemprop="datePublished"> 发表于 2016-09-11</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>这两天重构的第二,第三章已经读了两遍了.感觉东西太干,太实.有些的方可能是经验还达不到,明显感觉到面”huo”不开了,但是的确是大补啊,也想总结一下了,可能会有大量的原文摘录.还有些在工作中没没么相遇,以后回来再看,希望能有收获.</p>
+<h1 id="重构原则"><a href="#重构原则" class="headerlink" title="重构原则"></a>重构原则</h1><p>第二章详细阐述了是什么为什么怎么做,其中的思辨很精彩.</p>
+<h2 id="重构的定义"><a href="#重构的定义" class="headerlink" title="重构的定义"></a>重构的定义</h2><blockquote>
+<p>重构(名词):对软件内部结构的一种调整,目的实在不改变软件可观察行为的前提下,提高软件的可理解性,降低其修改成本</p>
+<p>重构(动词):使用一系列重构手法,在不改变软件可观察行为的前提下,调整其结构.</p>
+</blockquote>
+<p>共同点很明显,<strong>就是不能改变软件可观察的外观.</strong>这搞得我们程序员有点像幕后黑手,表面和平,背后暗流汹涌.还有就是不能两手都要抓,两手都要硬了.一定要遵循<strong>两顶帽子原则</strong>.原则即是:增加新功能与重构分别是两顶帽子,一次只能带一顶.</p>
+<h2 id="为何重构"><a href="#为何重构" class="headerlink" title="为何重构"></a>为何重构</h2><h3 id="1-重构改进软件设计"><a href="#1-重构改进软件设计" class="headerlink" title="1.重构改进软件设计"></a>1.重构改进软件设计</h3><p>其中代码结构的流失是累积性的,这点感受太明显了,现在因为追求迭代,追求快速上架新功能,整个项目很多东西,都是快速集成,与当初搭架子的时候想的完全不一样,甚至还有一部分代码直接是粘的,对程序的思路影响更大.后面新功能想上,就很麻烦,有时候需要什么黑魔法,更别提什么性能了,在我看来这些黑魔法都是违背程序可读性与可维护性的.所以更凸显了重构的作用.</p>
+<h3 id="2-重构使软件更容易理解"><a href="#2-重构使软件更容易理解" class="headerlink" title="2.重构使软件更容易理解"></a>2.重构使软件更容易理解</h3><p>这里也是要庆幸了,我没怎么接过二手代码,不过现在想想接受我的第一份代码的程序员坟头上的有几米高了(偷笑),但是重构的确可以快速提高可读性,其实中间还能提高程序的短读性,你再也不害怕,一个思路中间出去吃个饭就忘了,因为代码是在太流畅了.</p>
+<h3 id="3-重构找bug-重构提高编程速度"><a href="#3-重构找bug-重构提高编程速度" class="headerlink" title="3.重构找bug,重构提高编程速度"></a>3.重构找bug,重构提高编程速度</h3><p>我的感觉其实还是bug找重构多谢,因为有的地方写不通了,才去改是很累的.至于编程速度,清晰地结构的确可以提高编程速度.</p>
+<h2 id="何时重构"><a href="#何时重构" class="headerlink" title="何时重构"></a>何时重构</h2><h3 id="添加功能时重构"><a href="#添加功能时重构" class="headerlink" title="添加功能时重构"></a>添加功能时重构</h3><h3 id="修改bug时重构"><a href="#修改bug时重构" class="headerlink" title="修改bug时重构"></a>修改bug时重构</h3><h3 id="复审代码时重构"><a href="#复审代码时重构" class="headerlink" title="复审代码时重构"></a>复审代码时重构</h3><p>总结下就是随时重构,但是还是要注意进度的,不能重构起来没完,耽误进度.这里有个今天明天的比喻还是很形象的,重构代码是为了明天,写代码是为了今天.相信程序员还是很有忧患意识的,毕竟是个学习种群,但也不要为了明天,饿坏了今天的自己.</p>
+<h2 id="重构中的难题"><a href="#重构中的难题" class="headerlink" title="重构中的难题"></a>重构中的难题</h2><h3 id="1-数据库"><a href="#1-数据库" class="headerlink" title="1.数据库"></a>1.数据库</h3><p>这里不妄言,数据库了解的的确不多,只懂基础,不敢多说.</p>
+<h3 id="2-接口"><a href="#2-接口" class="headerlink" title="2.接口"></a>2.接口</h3><p>自己换位思想,你要是用了一个三天两头换api的三方,你会不会骂娘,尤其是你兴高采烈的觉着今天可以早下班,刚出门就让老板追回来重新配适新的api,你会不会骂娘?当然你可以保留旧接口,然后带来双倍的维护困难.即使你一直维护着新旧两套接口,改的速度快了,我们也麻烦不是.</p>
+<h3 id="3-难以重构完成的设计改动-安全"><a href="#3-难以重构完成的设计改动-安全" class="headerlink" title="3.难以重构完成的设计改动(安全)"></a>3.难以重构完成的设计改动(安全)</h3><p>有时候有些东西跟安全沾边,多么笨重他也要用了,没办法数据安全太重要了.</p>
+<h3 id="4-不该重构"><a href="#4-不该重构" class="headerlink" title="4.不该重构"></a>4.不该重构</h3><p>这里分时间因素与成本因素了,成本就是重构代价实在太大,不如推倒重盖.时间就是要交代码了的时间到了,就别重构,先想想饭碗吧…</p>
+<h2 id="重构与设计"><a href="#重构与设计" class="headerlink" title="重构与设计"></a>重构与设计</h2><p>其实重构设计我感觉本来基本就是一回事,无非设计的目的就是减少重构罢了.还有这里我的感觉是,最好重构不要动设计模式里的东西,虽然从基本上来看可读性的确增加了,但是人有思维惯性的啊.</p>
+<h2 id="重构与性能"><a href="#重构与性能" class="headerlink" title="重构与性能"></a>重构与性能</h2><p>重构与性能一直是个挺矛盾的,因为客观上讲重构大多是会略微降低下性能,但是重构后的代码又可以高屋建瓴,更好地提升性能.还是那个今天明天吧,从长远上看还是重构吧.</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>啪啪啪啪打了这么多,这些高大上的东西可能还是吃的不透吧,但是希望在以后的编程中,抬头看到这些大神们闪耀着思维的光辉,还是能有所明悟的吧,我可是站在巨人的肚脐眼上啊!</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/读书笔记/">读书笔记</a><a href="/tags/重构/">重构</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/09/11/重构-读书笔记-二/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/09/11/重构-读书笔记-二/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/09/03/重构-读书笔记-一/" title="重构 读书笔记(一)" itemprop="url">重构 读书笔记(一)</a>
   </h1>
   <p class="article-author">By
@@ -88,7 +163,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-03T07:47:39.000Z" itemprop="datePublished"> 發表於 2016-09-03</time>
+    <time datetime="2016-09-03T07:47:39.000Z" itemprop="datePublished"> 发表于 2016-09-03</time>
     
   </p>
 </header>
@@ -153,7 +228,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-16T01:04:42.000Z" itemprop="datePublished"> 發表於 2016-08-16</time>
+    <time datetime="2016-08-16T01:04:42.000Z" itemprop="datePublished"> 发表于 2016-08-16</time>
     
   </p>
 </header>
@@ -217,7 +292,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> 發表於 2016-04-12</time>
+    <time datetime="2016-04-12T12:55:38.000Z" itemprop="datePublished"> 发表于 2016-04-12</time>
     
   </p>
 </header>
@@ -282,7 +357,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-03-23T01:52:45.000Z" itemprop="datePublished"> 發表於 2016-03-23</time>
+    <time datetime="2016-03-23T01:52:45.000Z" itemprop="datePublished"> 发表于 2016-03-23</time>
     
   </p>
 </header>
@@ -332,107 +407,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/03/17/关于hexo搭建微博中遇到的坑/" title="关于hexo搭建blog中遇到的坑与解决办法" itemprop="url">关于hexo搭建blog中遇到的坑与解决办法</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-03-17T06:41:44.000Z" itemprop="datePublished"> 發表於 2016-03-17</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>传说中使用md写微博才是男人(程序员)的浪漫,而且以前的博客也倒了,就用github+hexo搭建了现在您在游览的这个博客,这里呢首先要感谢下,我这个主题Jacman的制作者,主题非常漂亮实用,要不我还要费事去学js.</p>
-<hr>
-<p>首先列举下我搭建过程中用到的文章:<br>1.<a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="external">http://www.jianshu.com/p/35e197cb1273</a> 这篇是介绍基本流程的<br>2.<a href="http://lukang.me/2015/optimization-of-hexo-2.html" target="_blank" rel="external">http://lukang.me/2015/optimization-of-hexo-2.html</a> 这是讲怎么优化定制的<br>3.<a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a> 这个是官方文档<br>4.<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">https://github.com/wuchong/jacman</a>  这个是我用的主题</p>
-<hr>
-<h3 id="搭建中遇到的问题与解决办法"><a href="#搭建中遇到的问题与解决办法" class="headerlink" title="搭建中遇到的问题与解决办法"></a>搭建中遇到的问题与解决办法</h3><hr>
-<ul>
-<li><h4 id="绑定域名问题"><a href="#绑定域名问题" class="headerlink" title="绑定域名问题"></a>绑定域名问题</h4>在绑定域名开始的时候解析地址出了问题,后来改正后,github一直在报404错误,阅读官方文档,需要配置CNAME文件,配置好了CNAME文件也一直报404,然后就开始犯难,最后在github的仓库中的setting中发现了一个Custom domain项,配上了现有域名,问题解决.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="绑定域名问题造成的其他目录无法打开"><a href="#绑定域名问题造成的其他目录无法打开" class="headerlink" title="绑定域名问题造成的其他目录无法打开"></a>绑定域名问题造成的其他目录无法打开</h4>需要在blog所属的文件config文件下配置上你所注册的顶级域名,就可以了.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="在将博客上传至服务器时CNAME文件被覆盖"><a href="#在将博客上传至服务器时CNAME文件被覆盖" class="headerlink" title="在将博客上传至服务器时CNAME文件被覆盖"></a>在将博客上传至服务器时CNAME文件被覆盖</h4>将CNAME或者是README.md之类的文件放到source/下,可以防止被覆盖.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="关于如何加载图片以及后续问题"><a href="#关于如何加载图片以及后续问题" class="headerlink" title="关于如何加载图片以及后续问题"></a>关于如何加载图片以及后续问题</h4>简单的加载方式很简单,只需要source文件夹下放入图片就可以在博文中引用,但是这样一旦图片太多整个文件就会显得很乱,其实可以通过配置config文件,将post_asset_folder:改为ture就可以每当创建一篇文章时,自动创建一个同名文件夹,引用图片时,直接写文件名即可.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4>想要偷懒的话直接把主题拿过来,配上基本的东西其实就还满好看了,但是还是建议了解下整个主题的架构,这样可以自己搭建一些环境累的东西.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="上传步骤"><a href="#上传步骤" class="headerlink" title="上传步骤"></a>上传步骤</h4>其实只是单纯的传传文章的话,其实只需要执行<br>hexo d<br>hexo g<br>但是有的时候,比如改动外观之类的操作,建议还是先之星hexo clean 操作比较好,这里其实建议每次上传都执行以下clean,g,d这套组合拳.</li>
-</ul>
-<hr>
-<ul>
-<li><h4 id="404页面的利用-改"><a href="#404页面的利用-改" class="headerlink" title="404页面的利用(改)"></a>404页面的利用(改)</h4>本来404页面其实是可以修改的,GitHub Pages 自定义404页面非常容易，直接在根目录下创建自己的404.html就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。<br>但是这里有个东西就很坑爹了,最近关注了些安全方面的问题,有很多黑客在公益404上挂马,还有什么跳转挂马之类的,总之现在的404貌似不是很安全,建议还是别弄了.</li>
-</ul>
-<hr>
-<h3 id="推荐个MD编辑器"><a href="#推荐个MD编辑器" class="headerlink" title="推荐个MD编辑器"></a>推荐个MD编辑器</h3><p><a href="https://atom.io/" target="_blank" rel="external">https://atom.io/</a>  atom这个编辑器我以前就在用的确好用</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/博客搭建/">博客搭建</a><a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/03/17/关于hexo搭建微博中遇到的坑/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/03/17/关于hexo搭建微博中遇到的坑/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -442,7 +426,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
@@ -451,10 +435,6 @@
 		
 			
 				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
 			
 		
 			
@@ -470,7 +450,15 @@
 			
 		
 			
+				<li><a href="/tags/重构/" title="重构">重构<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/博客搭建/" title="博客搭建">博客搭建<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
@@ -478,15 +466,15 @@
 			
 		
 			
-				<li><a href="/tags/适配/" title="适配">适配<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/位运算/" title="位运算">位运算<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
+				<li><a href="/tags/直播技术/" title="直播技术">直播技术<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/总结/" title="总结">总结<sup>1</sup></a></li>
 			
 		
 			
@@ -494,11 +482,15 @@
 			
 		
 			
-				<li><a href="/tags/编程之美/" title="编程之美">编程之美<sup>1</sup></a></li>
+				<li><a href="/tags/适配/" title="适配">适配<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/编程之美/" title="编程之美">编程之美<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -510,9 +502,9 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">標簽雲</p>
+    <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 15px;">思路拓展</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/适配/" style="font-size: 10px;">适配</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 15px;">重构</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+       <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 15px;">思路拓展</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/直播技术/" style="font-size: 10px;">直播技术</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/适配/" style="font-size: 10px;">适配</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 15px;">重构</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
     </div>
   </div>
 
@@ -660,7 +652,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
