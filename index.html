@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="YaronYang&#39;s Blog">YaronYang&#39;s Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yaronyang.com">
 					</form>
 					
@@ -88,7 +88,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-20T16:11:14.000Z" itemprop="datePublished"> 发表于 2016-10-21</time>
+    <time datetime="2016-10-20T16:11:14.000Z" itemprop="datePublished"> Published 2016-10-21</time>
     
   </p>
 </header>
@@ -149,7 +149,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-18T03:30:30.000Z" itemprop="datePublished"> 发表于 2016-10-18</time>
+    <time datetime="2016-10-18T03:30:30.000Z" itemprop="datePublished"> Published 2016-10-18</time>
     
   </p>
 </header>
@@ -213,7 +213,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> 发表于 2016-10-17</time>
+    <time datetime="2016-10-17T02:40:14.000Z" itemprop="datePublished"> Published 2016-10-17</time>
     
   </p>
 </header>
@@ -279,7 +279,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Swfit/">Swfit</a><a href="/tags/翻译/">翻译</a><a href="/tags/iOS/">iOS</a>
+  <span></span> <a href="/tags/iOS/">iOS</a><a href="/tags/Swfit/">Swfit</a><a href="/tags/翻译/">翻译</a>
   </div>
 
 </div>
@@ -317,7 +317,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-02T01:52:56.000Z" itemprop="datePublished"> 发表于 2016-10-02</time>
+    <time datetime="2016-10-02T01:52:56.000Z" itemprop="datePublished"> Published 2016-10-02</time>
     
   </p>
 </header>
@@ -332,7 +332,7 @@
 <p>####主动建议<br>貌似iOS 10 还支持了类似于安卓的用户习惯引导,这个还是蛮不错的,要是好的话准备试一试了.</p>
 <h2 id="我遇到的一些坑"><a href="#我遇到的一些坑" class="headerlink" title="我遇到的一些坑"></a>我遇到的一些坑</h2><h4 id="Notification-通知框架"><a href="#Notification-通知框架" class="headerlink" title="Notification(通知框架)"></a>Notification(通知框架)</h4><p>这个新更新了,感觉就是不一样,小卖部变商场了,还是准备写一篇专门的总结,这里不写了,没写的,再填坑.</p>
 <h4 id="ATS问题-1"><a href="#ATS问题-1" class="headerlink" title="ATS问题"></a>ATS问题</h4><p>这有大神的文章,我就不献丑了<br><a href="https://onevcat.com/2016/06/ios-10-ats/" target="_blank" rel="external">https://onevcat.com/2016/06/ios-10-ats/</a> 喵神写的ATS的文章<br>拜读之后受益匪浅</p>
-<h4 id="隐私权限"><a href="#隐私权限" class="headerlink" title="隐私权限"></a>隐私权限</h4><p>刚开始发现app直接崩溃有点吓人,后来发现是隐私权限没有配置,这个在info.plist中就可以配,当然写代码配置也是阔以滴.</p>
+<h4 id="隐私权限"><a href="#隐私权限" class="headerlink" title="隐私权限"></a>隐私权限</h4><p>刚开始发现app直接崩溃有点吓人,后来发现是隐私权限没有配置,这个在info.plist中就可以配,当然写代码配置也是阔以滴.<br>这里给大家提供一下怎么配置,在工程里打开info.plist<br>添加以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt; 这里是功能    </div><div class="line">&lt;string&gt;这里写说明理由,比如:大哥啊!我要用相机啊&lt;/string&gt;</div></pre></td></tr></table></figure><br>这个是懒人版本的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 相册 --&gt;</div><div class="line">&lt;key&gt;NSPhotoLibraryUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问相册&lt;/string&gt;</div><div class="line">&lt;!-- 相机 --&gt;</div><div class="line">&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问相机&lt;/string&gt;</div><div class="line">&lt;!-- 麦克风 --&gt;</div><div class="line">&lt;key&gt;NSMicrophoneUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问麦克风&lt;/string&gt;</div><div class="line">&lt;!-- 位置 --&gt;</div><div class="line">&lt;key&gt;NSLocationUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问位置&lt;/string&gt;</div><div class="line">&lt;!-- 在使用期间访问位置 --&gt;</div><div class="line">&lt;key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能在使用期间访问位置&lt;/string&gt;</div><div class="line">&lt;!-- 始终访问位置 --&gt;</div><div class="line">&lt;key&gt;NSLocationAlwaysUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能始终访问位置&lt;/string&gt;</div><div class="line">&lt;!-- 日历 --&gt;</div><div class="line">&lt;key&gt;NSCalendarsUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问日历&lt;/string&gt;</div><div class="line">&lt;!-- 提醒事项 --&gt;</div><div class="line">&lt;key&gt;NSRemindersUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问提醒事项&lt;/string&gt;</div><div class="line">&lt;!-- 运动与健身 --&gt;</div><div class="line">&lt;key&gt;NSMotionUsageDescription&lt;/key&gt; &lt;string&gt;App需要您的同意,才能访问运动与健身&lt;/string&gt;</div><div class="line">&lt;!-- 健康更新 --&gt;</div><div class="line">&lt;key&gt;NSHealthUpdateUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问健康更新 &lt;/string&gt;</div><div class="line">&lt;!-- 健康分享 --&gt;</div><div class="line">&lt;key&gt;NSHealthShareUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问健康分享&lt;/string&gt;</div><div class="line">&lt;!-- 蓝牙 --&gt;</div><div class="line">&lt;key&gt;NSBluetoothPeripheralUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问蓝牙&lt;/string&gt;</div><div class="line">&lt;!-- 媒体资料库 --&gt;</div><div class="line">&lt;key&gt;NSAppleMusicUsageDescription&lt;/key&gt;</div><div class="line">&lt;string&gt;App需要您的同意,才能访问媒体资料库&lt;/string&gt;</div></pre></td></tr></table></figure><br>这个适配后台的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;UIBackgroundModes&lt;/key&gt;</div><div class="line">&lt;array&gt;</div><div class="line">&lt;!-- 在这里写上你在后台模式下要使用权限对应的key --&gt;</div><div class="line">&lt;string&gt;location&lt;/string&gt;</div></pre></td></tr></table></figure><br>懒人的代码来自于北漂的银,谢谢这位童鞋~</p>
 <h4 id="判断版本"><a href="#判断版本" class="headerlink" title="判断版本"></a>判断版本</h4><p>在这里推荐使用<br>[[UIDevice currentDevice] systemVersion].floatValue,<br>[[UIDevice currentDevice] systemVersion]<br>这两个方法俩判断,结果都是10.0,我这里用的第一个,但是貌似还有人用[[[[UIDevice currentDevice] systemVersion] substringToIndex:1] integerValue]判断这个一是长(虽然都是粘贴,但是看着烦),而是版本返回竟然是1….,当然你要是依旧爱着它,那你就去改判断条件(不过那样是真蠢.)</p>
 <h4 id="XIB问题"><a href="#XIB问题" class="headerlink" title="XIB问题"></a>XIB问题</h4><p>XIB貌似进去XCode8的时候点了一下,忘了是啥了就全好了,不过我看文章有反应退回Xcode7中XIB就不能用了的事,貌似可以删除XIB中</p>
 <p><capability name="documents saved in the Xcode 8 format" mintoolsversion="8.0"><br>但是更新了就更新了,认命向前看吧,少年!</capability></p>
@@ -387,7 +387,7 @@
 		<a href="/about" title="YaronYang" target="_blank" itemprop="author">YaronYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-23T01:40:06.000Z" itemprop="datePublished"> 发表于 2016-09-23</time>
+    <time datetime="2016-09-23T01:40:06.000Z" itemprop="datePublished"> Published 2016-09-23</time>
     
   </p>
 </header>
@@ -439,10 +439,10 @@
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -452,7 +452,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -464,11 +464,11 @@
 			
 		
 			
-				<li><a href="/tags/iOS/" title="iOS">iOS<sup>2</sup></a></li>
+				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/随笔/" title="随笔">随笔<sup>2</sup></a></li>
+				<li><a href="/tags/iOS/" title="iOS">iOS<sup>2</sup></a></li>
 			
 		
 			
@@ -488,7 +488,7 @@
 			
 		
 			
-				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
+				<li><a href="/tags/适配/" title="适配">适配<sup>1</sup></a></li>
 			
 		
 			
@@ -508,11 +508,11 @@
 			
 		
 			
-				<li><a href="/tags/适配/" title="适配">适配<sup>1</sup></a></li>
+				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Swfit/" title="Swfit">Swfit<sup>1</sup></a></li>
+				<li><a href="/tags/翻译/" title="翻译">翻译<sup>1</sup></a></li>
 			
 		
 			
@@ -528,7 +528,7 @@
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">标签云</p>
+    <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/Swfit/" style="font-size: 10px;">Swfit</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/思路拓展/" style="font-size: 15px;">思路拓展</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/直播技术/" style="font-size: 10px;">直播技术</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a> <a href="/tags/编程之美/" style="font-size: 10px;">编程之美</a> <a href="/tags/翻译/" style="font-size: 10px;">翻译</a> <a href="/tags/读书笔记/" style="font-size: 20px;">读书笔记</a> <a href="/tags/适配/" style="font-size: 10px;">适配</a> <a href="/tags/通告/" style="font-size: 10px;">通告</a> <a href="/tags/重构/" style="font-size: 15px;">重构</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
     </div>
@@ -678,7 +678,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
